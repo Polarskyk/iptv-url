@@ -35,6 +35,8 @@ jobs:
         run: pipenv --python 3.13 && pipenv install --deploy
       - name: Update
         run: pipenv run dev
+      - name: restore result
+        run: python renew.py 
       - name: Commit and push if changed
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
