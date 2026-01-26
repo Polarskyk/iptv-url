@@ -85,8 +85,8 @@ def process_m3u_file(input_file, output_file):
     print(f"处理完成！已保存到 {output_file}")
 
 def main():
-    input_file = "./output/ipv6/result.m3u"
-    output_file = "./output/result.m3u"
+    input_file = "./output/result.m3u"
+    output_file = "./output/url.m3u"
     
     try:
         process_m3u_file(input_file, output_file)
