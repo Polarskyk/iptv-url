@@ -20,8 +20,6 @@ from utils.types import TestResult, ChannelTestResult, TestResultCacheData
 
 http.cookies._is_legal_key = lambda _: True
 cache: TestResultCacheData = {}
-# 有界缓存：限制每个 key 的结果条数以及总 key 数，避免测速期间无界增长
-_CACHE_MAX_ITEMS_PER_KEY = 20
 _CACHE_MAX_TOTAL_KEYS = 8192
 speed_test_timeout = config.speed_test_timeout
 speed_test_filter_host = config.speed_test_filter_host
@@ -604,7 +602,8 @@ async def get_speed(data, headers=None, ipv6_proxy=None, filter_resolution=open_
                     http_semaphore=http_semaphore,
                     probe_semaphore=probe_semaphore,
                 ))
-            if cache_key:
+           
+            if cache_key and result.get('delay', -1) != -1 and (result.get('speed') or 0) > 0:
                 _cache_add_result(cache_key, result)
     except Exception:
         pass
@@ -672,17 +671,16 @@ def get_sort_result(
 def _cache_add_result(cache_key: str, result: dict) -> None:
     """
     Add a speed result to the bounded global cache.
-    Limits per-key list length and total key count to prevent unbounded growth.
+    Keeps ALL samples per key (for accurate averaging); only limits total key count.
     """
     items = cache.get(cache_key)
     if items is None:
         if len(cache) >= _CACHE_MAX_TOTAL_KEYS:
+
             for key in list(cache)[: len(cache) // 2]:
                 cache.pop(key, None)
         cache[cache_key] = [result]
         return
-    if len(items) >= _CACHE_MAX_ITEMS_PER_KEY:
-        items.pop(0)
     items.append(result)
 
 
