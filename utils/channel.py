@@ -817,11 +817,13 @@ async def test_speed(data, ipv6=False, callback=None, on_task_complete=None):
 
         host = merged.get("host")
         if host:
-            
+            # IPv6 代理模式下 IPv6 URL 使用默认有效结果（speed=inf）
             is_ipv6_default = bool(ipv6_proxy_url) and merged.get("ipv_type") == "ipv6"
-            if is_valid or is_ipv6_default:
+            # 仅"连接失败"（delay==-1，host 根本连不上）才累计拉黑；
+            # 测速成功但不达标的源 host 可达，不应拉黑，否则同 host 的达标 URL 会被误跳过
+            connect_failed = merged.get("delay") == -1
+            if is_ipv6_default or not connect_failed:
                 failed_host_counts.pop(host, None)
-                blacklisted_hosts.discard(host)
             else:
                 failed_host_counts[host] = failed_host_counts.get(host, 0) + 1
                 if failed_host_counts[host] >= HOST_FAIL_LIMIT:
@@ -913,9 +915,10 @@ async def test_speed(data, ipv6=False, callback=None, on_task_complete=None):
                             probe_semaphore=probe_semaphore,
                         )
                 except TimeoutError:
-                    result = {}
+                    # 显式标记连接失败（delay=-1），使 host 失效计数与冻结机制正确生效
+                    result = {'delay': -1, 'speed': 0, 'resolution': info.get('resolution')}
                 except Exception:
-                    result = {}
+                    result = {'delay': -1, 'speed': 0, 'resolution': info.get('resolution')}
                 handle_result(cate, name, info, result)
 
         workers = [
