@@ -248,6 +248,9 @@ def hls_proxy(channel_id):
 
     hls_min_segments = 3
     waited = 0.0
+    # 指数退避轮询：前期快速检查，随后拉长间隔，减少文件读 IO 与线程占用
+    wait_interval = HLS_WAIT_INTERVAL
+    max_interval = 2.0
     while waited < HLS_WAIT_TIMEOUT:
         if os.path.exists(m3u8_path):
             try:
@@ -259,8 +262,11 @@ def hls_proxy(channel_id):
                     break
             except Exception as e:
                 print(t("msg.error_channel_id_m3u8_read_info").format(channel_id=channel_id, info=e))
-        time.sleep(HLS_WAIT_INTERVAL)
-        waited += HLS_WAIT_INTERVAL
+        step = min(wait_interval, HLS_WAIT_TIMEOUT - waited)
+        if step > 0:
+            time.sleep(step)
+        waited += step
+        wait_interval = min(wait_interval * 1.5, max_interval)
 
     if not os.path.exists(m3u8_path):
         return jsonify({t("name.error"): t("msg.m3u8_hls_not_ready")}), 503
@@ -286,6 +292,21 @@ def on_done():
 
     print(t("msg.rtmp_on_done").format(channel_id=channel_id))
     return ''
+
+
+@app.after_request
+def _conditional_cache(response):
+    """Return 304 when the client already has the current ETag (avoids re-downloading results)."""
+    etag = response.headers.get("ETag")
+    if not etag:
+        return response
+    if_none_match = request.headers.get("If-None-Match")
+    if if_none_match and etag in if_none_match:
+        response.status_code = 304
+        response.set_data(b"")
+        response.headers.pop("Content-Length", None)
+        response.headers.pop("Content-Type", None)
+    return response
 
 
 def run_service():

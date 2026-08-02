@@ -25,7 +25,7 @@ jobs:
         shell: pwsh
 
       - name: Install dependencies with pipenv
-        run: pipenv --python 3.13 && pipenv install --dev
+        run: pipenv --python 3.13 && pipenv install --dev && pipenv run pip install beautifulsoup4==4.15.0
         shell: pwsh
 
       - name: Build the application

@@ -1,4 +1,5 @@
 import re
+import threading
 
 import requests
 from bs4 import BeautifulSoup
@@ -13,6 +14,17 @@ headers = {
     "Accept-Language": "zh-CN,zh;q=0.8",
     "User-Agent": config.user_agent or DEFAULT_USER_AGENT,
 }
+
+_request_local = threading.local()
+
+
+def _get_requests_session():
+    """Return a per-thread requests.Session to reuse HTTP connections safely across threads."""
+    session = getattr(_request_local, "session", None)
+    if session is None:
+        session = requests.Session()
+        _request_local.session = session
+    return session
 
 
 def _merge_headers(custom: dict | None) -> dict:
@@ -35,14 +47,14 @@ def get_requests(url, data=None, proxy=None, timeout=30, headers_override: dict 
     proxies = {"http": proxy, "https": proxy} if proxy else None
     response = None
     try:
-        with requests.Session() as session:
-            req_headers = _merge_headers(headers_override)
-            if data:
-                response = session.post(
-                    url, headers=req_headers, data=data, proxies=proxies, timeout=timeout
-                )
-            else:
-                response = session.get(url, headers=req_headers, proxies=proxies, timeout=timeout)
+        session = _get_requests_session()
+        req_headers = _merge_headers(headers_override)
+        if data:
+            response = session.post(
+                url, headers=req_headers, data=data, proxies=proxies, timeout=timeout
+            )
+        else:
+            response = session.get(url, headers=req_headers, proxies=proxies, timeout=timeout)
     except requests.RequestException as e:
         raise e
 

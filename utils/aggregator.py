@@ -10,6 +10,24 @@ from utils.config import config
 from utils.tools import get_logger, close_logger_handlers
 
 
+def _render_items_equal(a, b) -> bool:
+    """
+    Compare two item lists by their render-relevant fields (id/url/extra_info).
+    Used to detect whether a partial flush would actually change the rendered output.
+    """
+    if len(a) != len(b):
+        return False
+    for x, y in zip(a, b):
+        if not isinstance(x, dict) or not isinstance(y, dict):
+            if x != y:
+                return False
+            continue
+        if (x.get("id"), x.get("url"), x.get("extra_info", "")) != (
+                y.get("id"), y.get("url"), y.get("extra_info", "")):
+            return False
+    return True
+
+
 class ResultAggregator:
     """
     Aggregates test results and periodically writes sorted views to files.
@@ -155,6 +173,24 @@ class ResultAggregator:
                 )
             except Exception:
                 new_sorted = defaultdict(lambda: defaultdict(list))
+
+        # 部分 flush 且非最终写盘时：若受影响频道渲染内容与上次完全一致，跳过全量渲染与写盘
+        if affected and not is_last:
+            changed = False
+            for cate, names in new_sorted.items():
+                if cate not in self.base_data:
+                    continue
+                for name, vals in names.items():
+                    if name not in self.base_data.get(cate, {}):
+                        continue
+                    prev = self.result.get(cate, {}).get(name, [])
+                    if not _render_items_equal(prev, vals):
+                        changed = True
+                        break
+                if changed:
+                    break
+            if not changed:
+                return
 
         merged = defaultdict(lambda: defaultdict(list))
 

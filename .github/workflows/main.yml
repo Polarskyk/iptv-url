@@ -36,7 +36,7 @@ jobs:
       - name: Install pipenv
         run: pip3 install --user pipenv
       - name: Install dependecies
-        run: pipenv --python 3.13 && pipenv install --deploy
+        run: pipenv --python 3.13 && pipenv install --deploy && pipenv run pip install beautifulsoup4==4.15.0
       - name: Update
         run: pipenv run dev
       - name: Commit and push if changed

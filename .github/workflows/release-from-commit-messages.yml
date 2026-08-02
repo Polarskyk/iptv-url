@@ -32,6 +32,7 @@ jobs:
         run: |
           pipenv --python 3.13
           pipenv install --dev
+          pipenv run pip install beautifulsoup4==4.15.0
 
       - name: Build the application
         shell: pwsh

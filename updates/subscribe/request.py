@@ -3,6 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 from logging import INFO
 from threading import Lock
 from time import time
+import re
 import sys
 
 from tqdm.asyncio import tqdm_asyncio
@@ -11,7 +12,7 @@ import utils.constants as constants
 from utils.channel import format_channel_name
 from utils.config import config
 from utils.i18n import t
-from utils.requests.tools import get_soup_requests
+from utils.requests.tools import get_requests
 from utils.retry import retry_func
 from utils.tools import (
     get_pbar_remaining,
@@ -120,7 +121,7 @@ async def get_channels_by_subscribe_urls(
                 response = retry_func(
                     lambda: request_first(
                         candidates,
-                        lambda u: get_soup_requests(u, timeout=request_timeout, headers_override=headers),
+                        lambda u: get_requests(u, timeout=request_timeout, headers_override=headers),
                     ),
                     name=subscribe_url,
                 )
