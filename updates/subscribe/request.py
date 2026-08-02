@@ -3,6 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 from logging import INFO
 from threading import Lock
 from time import time
+import re
 import sys
 
 from tqdm.asyncio import tqdm_asyncio
@@ -11,7 +12,7 @@ import utils.constants as constants
 from utils.channel import format_channel_name
 from utils.config import config
 from utils.i18n import t
-from utils.requests.tools import get_soup_requests
+from utils.requests.tools import get_requests
 from utils.retry import retry_func
 from utils.tools import (
     get_pbar_remaining,
@@ -120,7 +121,7 @@ async def get_channels_by_subscribe_urls(
                 response = retry_func(
                     lambda: request_first(
                         candidates,
-                        lambda u: get_soup_requests(u, timeout=request_timeout, headers_override=headers),
+                        lambda u: get_requests(u, timeout=request_timeout, headers_override=headers),
                     ),
                     name=subscribe_url,
                 )
@@ -133,6 +134,8 @@ async def get_channels_by_subscribe_urls(
                     content = response.text
                 else:
                     content = str(response)
+                # 移除 HTML 注释，保持与原先 get_soup_requests 的语义一致
+                content = re.sub(r"<!--.*?-->", "", content or "", flags=re.DOTALL)
                 if not content:
                     disable_reason = t("msg.auto_disable_empty_content")
                 try:
