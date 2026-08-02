@@ -938,7 +938,6 @@ def sort_channel_result(channel_data, result=None, filter_host=False, ipv6_suppo
 
             if filter_host:
                 merged_items = []
-                # 同一 host 的测速平均只计算一次，避免逐 URL 重复遍历 cache
                 host_speed_cache = {}
                 for value in values:
                     origin = value.get("origin")
