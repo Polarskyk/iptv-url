@@ -134,8 +134,6 @@ async def get_channels_by_subscribe_urls(
                     content = response.text
                 else:
                     content = str(response)
-                # 移除 HTML 注释，保持与原先 get_soup_requests 的语义一致
-                content = re.sub(r"<!--.*?-->", "", content or "", flags=re.DOTALL)
                 if not content:
                     disable_reason = t("msg.auto_disable_empty_content")
                 try:
