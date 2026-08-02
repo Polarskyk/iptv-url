@@ -3,8 +3,8 @@ import re
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timedelta
-from threading import Lock
+from datetime import datetime, timedelta, timezone
+from threading import Lock, local as thread_local
 from time import time
 import sys
 
@@ -46,6 +46,37 @@ def _normalize_epg_content(content, request_url=None, response=None):
     return content
 
 
+def _parse_epg_datetime(value) -> datetime | None:
+    """
+    Parse a fixed-format EPG timestamp (%Y%m%d%H%M%S%z) without strptime.
+    Accepts '+0800', '+08:00', 'Z' or no timezone suffix.
+    """
+    if not value:
+        return None
+    try:
+        s = "".join(str(value).split())
+        if len(s) < 14:
+            return None
+        year = int(s[0:4])
+        month = int(s[4:6])
+        day = int(s[6:8])
+        hour = int(s[8:10])
+        minute = int(s[10:12])
+        second = int(s[12:14])
+        tz_part = s[14:]
+        if not tz_part or tz_part == "Z":
+            tzinfo = None
+        else:
+            sign = 1 if tz_part[0] == "+" else -1
+            tz_str = tz_part[1:].replace(":", "")
+            tz_h = int(tz_str[:2] or 0)
+            tz_m = int(tz_str[2:4] or 0)
+            tzinfo = timezone(timedelta(hours=sign * tz_h, minutes=sign * tz_m))
+        return datetime(year, month, day, hour, minute, second, tzinfo=tzinfo)
+    except Exception:
+        return None
+
+
 def parse_epg(epg_content):
     try:
         parser = ET.XMLParser(encoding='UTF-8')
@@ -70,10 +101,10 @@ def parse_epg(epg_content):
 
     for programme in root.findall('programme'):
         channel_id = programme.get('channel')
-        channel_start = datetime.strptime(
-            re.sub(r'\s+', '', programme.get('start')), "%Y%m%d%H%M%S%z")
-        channel_stop = datetime.strptime(
-            re.sub(r'\s+', '', programme.get('stop')), "%Y%m%d%H%M%S%z")
+        channel_start = _parse_epg_datetime(programme.get('start'))
+        channel_stop = _parse_epg_datetime(programme.get('stop'))
+        if channel_start is None or channel_stop is None:
+            continue
 
         timezone = channel_start.tzinfo
         if timezone not in now_by_timezone:
@@ -105,6 +136,20 @@ def _epg_dedup_key(url) -> str:
     if key.endswith(".gz"):
         key = key[:-3]
     return key.lower()
+
+
+_epg_thread_local = thread_local()
+
+
+def _get_epg_session():
+    """
+    Return a per-thread requests.Session (thread-safe, keeps connection reuse).
+    """
+    session = getattr(_epg_thread_local, "session", None)
+    if session is None:
+        session = Session()
+        _epg_thread_local.session = session
+    return session
 
 
 async def get_epg(names=None, callback=None, extra_entries=None):
@@ -143,7 +188,6 @@ async def get_epg(names=None, callback=None, extra_entries=None):
     result = defaultdict(list)
     all_result_verify = set()
     result_lock = Lock()
-    session = Session()
     open_unmatch_category = config.open_unmatch_category
     open_auto_disable_source = config.open_auto_disable_source
     disabled_urls = set()
@@ -169,7 +213,7 @@ async def get_epg(names=None, callback=None, extra_entries=None):
                 candidates = get_request_url_candidates(request_url)
 
                 def _fetch(u):
-                    resp = session.get(u, timeout=config.request_timeout, headers=headers)
+                    resp = _get_epg_session().get(u, timeout=config.request_timeout, headers=headers)
                     resp.raise_for_status()
                     return resp
 
@@ -227,7 +271,6 @@ async def get_epg(names=None, callback=None, extra_entries=None):
     with ThreadPoolExecutor(max_workers=config.performance_settings.fetch_workers) as executor:
         for entry in discovered_entries:
             executor.submit(process_run, entry)
-    session.close()
     pbar.close()
     active_count = len(configured_entries)
     disabled_count = 0
