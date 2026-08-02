@@ -15,11 +15,13 @@ from utils.config import config
 from utils.ffmpeg import probe_url, ffmpeg_url
 from utils.i18n import t
 from utils.requests.tools import headers as request_headers
-from utils.tools import get_resolution_value
+from utils.tools import get_resolution_value, get_url_host
 from utils.types import TestResult, ChannelTestResult, TestResultCacheData
 
 http.cookies._is_legal_key = lambda _: True
 cache: TestResultCacheData = {}
+# ffprobe 结果按 host 缓存：同一 host 的多个 URL 只需探测一次（分辨率/编解码器通常一致）
+probe_cache: dict = {}
 _CACHE_MAX_TOTAL_KEYS = 8192
 speed_test_timeout = config.speed_test_timeout
 speed_test_filter_host = config.speed_test_filter_host
@@ -113,7 +115,9 @@ async def get_speed_with_download(url: str, headers: dict = None, session: Any =
     speed_samples = deque(maxlen=stability_window)
     try:
         async with _limit(semaphore):
-            async with session.get(url, headers=headers, timeout=timeout) as response:
+            # sock_read: 首字节后无数据则快速失败（失效/挂死源），正常持续流不受影响
+            async with session.get(url, headers=headers,
+                                   timeout=ClientTimeout(total=timeout, sock_connect=5, sock_read=5)) as response:
                 if response.status != 200:
                     raise Exception("Invalid response")
                 delay = int(round((time() - start_time) * 1000))
@@ -191,7 +195,9 @@ async def get_url_content(url: str, headers: dict = None, session: Any = None,
     content = ""
     try:
         async with _limit(semaphore):
-            async with session.get(url, headers=headers, timeout=timeout) as response:
+            # 同样使用 sock_read 快速失败挂死连接
+            async with session.get(url, headers=headers,
+                                   timeout=ClientTimeout(total=timeout, sock_connect=5, sock_read=5)) as response:
                 if response.status == 200:
                     payload = await response.content.read(playlist_max_bytes + 1)
                     if len(payload) > playlist_max_bytes:
@@ -301,7 +307,7 @@ async def get_result(url: str, headers: dict = None, resolution: str = None,
                             info['fps'] = stream_frame_rate
                         playlist_url = urljoin(url, best_playlist.uri)
                         playlist_content = await get_url_content(
-                            playlist_url, headers, active_session, timeout, semaphore=http_semaphore
+                            playlist_url, headers, active_session, min(timeout, 5), semaphore=http_semaphore
                         )
                         if playlist_content:
                             media_playlist = m3u8.loads(playlist_content)
@@ -354,8 +360,13 @@ async def get_result(url: str, headers: dict = None, resolution: str = None,
         if (filter_resolution and should_probe and not location
                 and not info.get('resolution') and info.get('delay') != -1):
             try:
-                async with _limit(probe_semaphore):
-                    probed = await probe_url(url, headers, timeout=timeout)
+                host = get_url_host(url) or url
+                probed = probe_cache.get(host)
+                if probed is None:
+                    async with _limit(probe_semaphore):
+                        probed = await probe_url(url, headers, timeout=timeout)
+                    if probed:
+                        probe_cache[host] = probed
                 if probed:
                     info['resolution'] = probed.get('resolution')
                     info['fps'] = probed.get('fps')
@@ -688,5 +699,6 @@ def clear_cache():
     """
     Clear the speed test cache
     """
-    global cache
+    global cache, probe_cache
     cache = {}
+    probe_cache = {}
