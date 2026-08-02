@@ -525,10 +525,18 @@ def convert_to_m3u(path=None, first_channel_name=None, data=None, content=None):
             os.replace(tmp_path, m3u_file_path)
 
 
+_RESULT_FILE_CACHE: dict = {}
+
+
+_BINARY_FILE_TYPES = {"gz"}
+
+
 def get_result_file_content(path=None, show_content=False, file_type=None):
     """
-    Get the content of the result file
+    Get the content of the result file (mtime+size cached to avoid re-reading on every request).
+    Binary types (e.g. gz) are read as bytes; text types are read as utf-8 str.
     """
+    binary = (file_type or "").lower() in _BINARY_FILE_TYPES
     result_file = (
         os.path.splitext(path)[0] + f".{file_type}"
         if file_type
@@ -540,12 +548,35 @@ def get_result_file_content(path=None, show_content=False, file_type=None):
                 result_file = os.path.splitext(path)[0] + ".m3u"
             if file_type != "txt" and show_content == False:
                 return send_file(resource_path(result_file), as_attachment=True)
-        with open(result_file, "r", encoding="utf-8") as file:
-            content = file.read()
+        try:
+            stat = os.stat(result_file)
+            cache_key = os.path.abspath(result_file)
+            cache_tag = (stat.st_mtime_ns, stat.st_size)
+            cached = _RESULT_FILE_CACHE.get(cache_key)
+            if cached and cached[0] == cache_tag:
+                content = cached[1]
+            else:
+                if binary:
+                    with open(result_file, "rb") as file:
+                        content = file.read()
+                else:
+                    with open(result_file, "r", encoding="utf-8") as file:
+                        content = file.read()
+                _RESULT_FILE_CACHE[cache_key] = (cache_tag, content)
+        except OSError:
+            content = b"" if binary else constants.waiting_tip
     else:
-        content = constants.waiting_tip
+        content = b"" if binary else constants.waiting_tip
     response = make_response(content)
-    response.mimetype = 'text/plain'
+    response.mimetype = "application/gzip" if binary else "text/plain"
+    # 缓存头：ETag + Cache-Control，配合 after_request 实现 304，减少重复传输
+    try:
+        payload = content if isinstance(content, bytes) else content.encode("utf-8")
+        etag = '"%s"' % hashlib.sha256(payload).hexdigest()[:16]
+        response.headers["ETag"] = etag
+        response.headers["Cache-Control"] = "public, max-age=30"
+    except Exception:
+        pass
     return response
 
 
