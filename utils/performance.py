@@ -109,22 +109,22 @@ def get_performance_settings(mode="auto", speed_test_limit=0):
     else:
         resolved_mode = requested_mode
 
-    memory_http_limit = _bounded(memory_gb * 3, 2, 16)
-    memory_probe_limit = _bounded(memory_gb / 1.5, 1, 4)
+    memory_http_limit = _bounded(memory_gb * 4, 2, 24)
+    memory_probe_limit = _bounded(memory_gb, 1, 8)
     memory_fetch_limit = _bounded(memory_gb * 2, 2, 16)
-    cpu_probe_limit = _bounded(cpu_count / 2, 1, 4)
+    cpu_probe_limit = _bounded(cpu_count, 1, 8)
 
     if resolved_mode == "powersave":
         http_concurrency = 3
         probe_concurrency = 1
         fetch_workers = 4
     elif resolved_mode == "fast":
-        http_concurrency = _bounded(cpu_count * 2.5, 8, 16)
-        probe_concurrency = _bounded(cpu_count / 2, 1, 4)
+        http_concurrency = _bounded(cpu_count * 3, 8, 24)
+        probe_concurrency = _bounded(cpu_count, 2, 6)
         fetch_workers = _bounded(cpu_count * 2, 8, 16)
     else:
-        http_concurrency = _bounded(cpu_count * 2, 5, 10)
-        probe_concurrency = _bounded(cpu_count / 2, 1, 2)
+        http_concurrency = _bounded(cpu_count * 4, 8, 20)
+        probe_concurrency = _bounded(cpu_count, 1, 4)
         fetch_workers = _bounded(cpu_count * 2, 6, 10)
 
     http_concurrency = min(http_concurrency, memory_http_limit)
