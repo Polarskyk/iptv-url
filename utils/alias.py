@@ -10,7 +10,6 @@ class Alias:
         self.primary_to_aliases: dict[str, set[str]] = {}
         self.alias_to_primary: dict[str, str] = {}
         self.pattern_to_primary: list[tuple[re.Pattern, str]] = []
-        # name -> primary 缓存，避免对同一名字反复做线性 pattern 扫描
         self._primary_cache: dict[str, str] = {}
 
         real_path = get_real_path(resource_path(constants.alias_path))
