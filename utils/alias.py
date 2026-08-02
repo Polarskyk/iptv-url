@@ -10,6 +10,8 @@ class Alias:
         self.primary_to_aliases: dict[str, set[str]] = {}
         self.alias_to_primary: dict[str, str] = {}
         self.pattern_to_primary: list[tuple[re.Pattern, str]] = []
+        # name -> primary 缓存，避免对同一名字反复做线性 pattern 扫描
+        self._primary_cache: dict[str, str] = {}
 
         real_path = get_real_path(resource_path(constants.alias_path))
         if os.path.exists(real_path):
@@ -41,12 +43,16 @@ class Alias:
 
     def get_primary(self, name: str):
         """
-        Get the primary name by alias
+        Get the primary name by alias (cached per name)
         """
+        cached = self._primary_cache.get(name)
+        if cached is not None:
+            return cached
         primary_name = self.alias_to_primary.get(name, None) or self.get_primary_by_pattern(name)
         if primary_name is None:
             alias_format_name = format_name(name)
             primary_name = self.alias_to_primary.get(alias_format_name, name)
+        self._primary_cache[name] = primary_name
         return primary_name
 
     def get_primary_by_pattern(self, name: str):
@@ -62,6 +68,7 @@ class Alias:
         """
         Set the aliases by name
         """
+        self._primary_cache.clear()
         if name in self.primary_to_aliases:
             for alias in self.primary_to_aliases[name]:
                 self.alias_to_primary.pop(alias, None)
