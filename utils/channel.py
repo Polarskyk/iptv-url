@@ -354,9 +354,14 @@ def get_channel_items(whitelist_maps, blacklist) -> CategoryChannelData:
 
     if config.open_history and os.path.exists(constants.cache_path):
         unmatched_history = defaultdict(list)
+        # 每个目标频道维护持久 URL set，避免 _append_history_items 反复重建列表（O(n²)）
+        history_seen_urls = {}
 
-        def _append_history_items(channel_data, info_list):
-            urls = [url for item in channel_data if (url := item.get("url"))]
+        def _append_history_items(channel_data, info_list, channel_key):
+            urls = history_seen_urls.get(channel_key)
+            if urls is None:
+                urls = {item.get("url") for item in channel_data if item.get("url")}
+                history_seen_urls[channel_key] = urls
             for info in info_list:
                 if not info:
                     continue
@@ -371,7 +376,7 @@ def get_channel_items(whitelist_maps, blacklist) -> CategoryChannelData:
                     pass
                 if info_url and info_url not in urls:
                     channel_data.append(info)
-                    urls.append(info_url)
+                    urls.add(info_url)
 
         try:
             with gzip.open(constants.cache_path, "rb") as file:
@@ -382,7 +387,7 @@ def get_channel_items(whitelist_maps, blacklist) -> CategoryChannelData:
                         if targets:
                             for target_cate, target_name in targets:
                                 channel_data = channels[target_cate][target_name]
-                                _append_history_items(channel_data, info_list)
+                                _append_history_items(channel_data, info_list, (target_cate, target_name))
                                 if not channel_data:
                                     for info in info_list:
                                         old_result_url = info.get("url") if info else None
@@ -933,13 +938,17 @@ def sort_channel_result(channel_data, result=None, filter_host=False, ipv6_suppo
 
             if filter_host:
                 merged_items = []
+                # 同一 host 的测速平均只计算一次，避免逐 URL 重复遍历 cache
+                host_speed_cache = {}
                 for value in values:
                     origin = value.get("origin")
                     if origin in retain or (not ipv6_support and result and value.get("ipv_type") == "ipv6"):
                         whitelist_result.append(value)
                     else:
                         host = value.get("host")
-                        merged = {**value, **(speed_lookup(host) or {})}
+                        if host not in host_speed_cache:
+                            host_speed_cache[host] = speed_lookup(host) or {}
+                        merged = {**value, **host_speed_cache[host]}
                         merged_items.append(merged)
 
                 sorter_input = chain(result_list, merged_items) if merged_items else result_list
