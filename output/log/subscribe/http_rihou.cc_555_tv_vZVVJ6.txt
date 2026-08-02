@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>短链生成器</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .links-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .links-table th {
+            background: #f8f9fa;
+            padding: 15px 10px;
+            text-align: left;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .links-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: top;
+        }
+        .link-info-row {
+            background: white;
+        }
+        .link-actions-row {
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+        .link-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .action-btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.3s;
+        }
+        .action-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        .btn-edit {
+            background: #f39c12;
+            color: white;
+        }
+        .btn-enable {
+            background: #27ae60;
+            color: white;
+        }
+        .btn-disable {
+            background: #95a5a6;
+            color: white;
+        }
+        .btn-delete {
+            background: #e74c3c;
+            color: white;
+        }
+        .btn-test {
+            background: #3498db;
+            color: white;
+        }
+        .link-status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .status-active {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status-disabled {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .status-expired {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .status-max_reached {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+        .short-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .short-link:hover {
+            text-decoration: underline;
+        }
+        .original-url {
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .link-note {
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #666;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1><i class="fas fa-link"></i> 短链生成器</h1>
+                <p>快速生成和管理短链接</p>
+            </div>
+            <div class="user-info">
+                                    <button class="btn btn-primary" onclick="openModal('login')">
+                        <i class="fas fa-sign-in-alt"></i> 登录
+                    </button>
+                    <button class="btn btn-success" onclick="openModal('register')">
+                        <i class="fas fa-user-plus"></i> 注册
+                    </button>
+                    <a href="admin.php" class="btn btn-warning">
+                        <i class="fas fa-cog"></i> 管理
+                    </a>
+                            </div>
+        </div>
+        
+                
+        <div class="content">
+            <div class="form-section">
+                <h2 class="section-title"><i class="fas fa-plus-circle"></i> 生成短链</h2>
+                
+                                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i> 请先登录以创建短链接
+                    </div>
+                            </div>
+            
+            <div class="list-section">
+                <h2 class="section-title"><i class="fas fa-list"></i> 我的短链</h2>
+                
+                <!-- 搜索区域 -->
+                                
+                                    <div class="empty-state">
+                        <i class="fas fa-inbox"></i>
+                        <p>
+                                                            请登录后查看短链接
+                                                    </p>
+                    </div>
+                            </div>
+        </div>
+    </div>
+
+    <!-- 编辑短链模态框 -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3><i class="fas fa-edit"></i> 编辑短链</h3>
+            <form method="POST" id="editForm">
+                <input type="hidden" name="edit_link" value="1">
+                <input type="hidden" name="link_id" id="edit_link_id">
+                
+                <div class="form-group">
+                    <label>目标URL:</label>
+                    <input type="url" id="edit_url" name="edit_url" required class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label>短码:</label>
+                    <input type="text" id="edit_custom_code" name="edit_custom_code" class="form-control" maxlength="20">
+                </div>
+                
+                <div class="form-group">
+                    <label>备注:</label>
+                    <textarea id="edit_note" name="edit_note" class="form-control" placeholder="添加备注，方便搜索和管理" maxlength="200" rows="2"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>有效期:</label>
+                    <select id="edit_expiry_days" name="edit_expiry_days" class="form-control">
+                        <option value="1">1天</option>
+                        <option value="7">7天</option>
+                        <option value="30">30天</option>
+                        <option value="0">永久</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>访问密码（可选）:</label>
+                    <input type="text" id="edit_link_password" name="edit_link_password" class="form-control" placeholder="留空表示无密码">
+                </div>
+                
+                <div class="form-group">
+                    <label>最大访问次数:</label>
+                    <input type="number" id="edit_max_clicks" name="edit_max_clicks" min="0" class="form-control">
+                    <small>0表示无限次数</small>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="edit_is_active" name="edit_is_active" value="1" checked> 启用短链
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">保存修改</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 登录注册模态框 -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>用户登录</h2>
+            
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab('login')">登录</div>
+                <div class="tab" onclick="switchTab('register')">注册</div>
+            </div>
+            
+            <!-- 登录表单 -->
+            <div id="loginTab" class="tab-content active">
+                                    <div class="error"></div>
+                                
+                <form method="POST">
+                    <input type="hidden" name="action" value="login">
+                    <div class="form-group">
+                        <label>用户名:</label>
+                        <input type="text" name="username" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>密码:</label>
+                        <input type="password" name="password" required class="form-control">
+                    </div>
+                    <button type="submit" class="submit-btn">登录</button>
+                </form>
+            </div>
+            
+            <!-- 注册表单 - 删除邮箱字段 -->
+            <div id="registerTab" class="tab-content">
+                                    <div class="error"></div>
+                                
+                <form method="POST">
+                    <input type="hidden" name="action" value="register">
+                    <div class="form-group">
+                        <label>用户名:</label>
+                        <input type="text" name="username" required class="form-control" placeholder="请输入用户名">
+                        <small class="form-note">用户名长度3-50个字符</small>
+                    </div>
+                    <div class="form-group">
+                        <label>密码:</label>
+                        <input type="password" name="password" required class="form-control" placeholder="请输入密码">
+                        <small class="form-note">密码长度至少3个字符</small>
+                    </div>
+                    <button type="submit" class="submit-btn">注册</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function editLink(linkId, shortCode, originalUrl, note, expiresAt, hasPassword, maxClicks, isActive) {
+            document.getElementById('edit_link_id').value = linkId;
+            document.getElementById('edit_custom_code').value = shortCode;
+            document.getElementById('edit_url').value = originalUrl;
+            document.getElementById('edit_note').value = note || '';
+            
+            // 设置过期时间
+            const expiryDays = getExpiryDays(expiresAt);
+            document.getElementById('edit_expiry_days').value = expiryDays;
+            
+            // 密码字段
+            document.getElementById('edit_link_password').value = '';
+            document.getElementById('edit_link_password').placeholder = hasPassword ? '***（已设置密码）' : '留空表示无密码';
+            
+            // 最大点击次数
+            document.getElementById('edit_max_clicks').value = maxClicks || 0;
+            
+            // 启用状态
+            document.getElementById('edit_is_active').checked = isActive === 1 || isActive === true;
+            
+            document.getElementById('editModal').style.display = 'block';
+        }
+
+        function getExpiryDays(expiresAt) {
+            if (!expiresAt) return 0;
+            
+            const now = new Date();
+            const expiryDate = new Date(expiresAt);
+            const diffTime = expiryDate - now;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            
+            return diffDays > 0 ? diffDays : 0;
+        }
+
+        function closeModal() {
+            document.getElementById('editModal').style.display = 'none';
+            document.getElementById('authModal').style.display = 'none';
+        }
+
+        function openModal(tab = 'login') {
+            document.getElementById('authModal').style.display = 'block';
+            switchTab(tab);
+        }
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            if (tabName === 'login') {
+                document.querySelector('.tab:nth-child(1)').classList.add('active');
+                document.getElementById('loginTab').classList.add('active');
+            } else {
+                document.querySelector('.tab:nth-child(2)').classList.add('active');
+                document.getElementById('registerTab').classList.add('active');
+            }
+        }
+
+        // 点击模态框外部关闭
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+        }
+
+        // ESC键关闭模态框
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // URL自动补全
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlInput = document.getElementById('url');
+            if (urlInput) {
+                urlInput.addEventListener('blur', function() {
+                    let url = this.value.trim();
+                    if (url && !url.startsWith('http://') && !url.startsWith('https://')) {
+                        this.value = 'http://' + url;
+                    }
+                });
+            }
+            
+            // 自定义短码验证
+            const customCodeInput = document.getElementById('custom_code');
+            if (customCodeInput) {
+                customCodeInput.addEventListener('input', debounce(function() {
+                    validateCustomCode(this);
+                }, 300));
+            }
+            
+            // 备注字段验证
+            const noteInput = document.getElementById('note');
+            if (noteInput) {
+                noteInput.addEventListener('input', debounce(function() {
+                    validateNote(this);
+                }, 300));
+            }
+            
+            // 页面加载动画
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.3s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        function validateCustomCode(input) {
+            const value = input.value;
+            const isValid = /^[a-zA-Z0-9_-]*$/.test(value) && value.length >= 1 && value.length <= 20;
+            
+            if (value && !isValid) {
+                input.classList.add('input-error');
+                input.classList.remove('input-success');
+                showTooltip(input, '短码只能包含字母、数字、下划线和减号，长度1-20位');
+                return false;
+            } else {
+                input.classList.remove('input-error');
+                input.classList.add('input-success');
+                setTimeout(() => input.classList.remove('input-success'), 2000);
+                hideTooltip(input);
+                return true;
+            }
+        }
+
+        function validateNote(input) {
+            const value = input.value;
+            const isValid = value.length <= 200;
+            
+            if (value && !isValid) {
+                input.classList.add('input-warning');
+                input.classList.remove('input-success');
+                showTooltip(input, '备注长度不能超过200个字符');
+                return false;
+            } else if (value) {
+                input.classList.remove('input-warning');
+                input.classList.add('input-success');
+                setTimeout(() => input.classList.remove('input-success'), 2000);
+                hideTooltip(input);
+                
+                // 显示字符计数
+                const counter = input.parentNode.querySelector('.char-counter') || createCharCounter(input);
+                counter.textContent = `${value.length}/200`;
+                return true;
+            } else {
+                input.classList.remove('input-warning', 'input-success');
+                hideTooltip(input);
+                return true;
+            }
+        }
+
+        function createCharCounter(input) {
+            const counter = document.createElement('div');
+            counter.className = 'char-counter';
+            counter.style.cssText = 'font-size: 12px; color: #666; text-align: right; margin-top: 5px;';
+            input.parentNode.appendChild(counter);
+            return counter;
+        }
+
+        function showTooltip(element, message) {
+            if (window.innerWidth <= 768) return;
+            
+            const tooltip = document.createElement('div');
+            tooltip.className = 'tooltip';
+            tooltip.textContent = message;
+            tooltip.style.cssText = `
+                position: absolute;
+                background: #333;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 4px;
+                font-size: 12px;
+                z-index: 10000;
+                white-space: nowrap;
+                pointer-events: none;
+                max-width: 200px;
+            `;
+            
+            document.body.appendChild(tooltip);
+            
+            const rect = element.getBoundingClientRect();
+            tooltip.style.left = (rect.left + rect.width / 2 - tooltip.offsetWidth / 2) + 'px';
+            tooltip.style.top = (rect.top - tooltip.offsetHeight - 5) + 'px';
+            
+            element.tooltip = tooltip;
+        }
+
+        function hideTooltip(element) {
+            if (element.tooltip) {
+                element.tooltip.remove();
+                element.tooltip = null;
+            }
+        }
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // 显示通知
+        function showNotification(message, type = 'success') {
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+            
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#27ae60' : type === 'error' ? '#e74c3c' : '#3498db'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 5px;
+                z-index: 10000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                animation: slideInRight 0.3s ease;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                max-width: 300px;
+            `;
+            
+            const icon = type === 'success' ? 'check-circle' : 
+                         type === 'error' ? 'exclamation-circle' : 'info-circle';
+            
+            notification.innerHTML = `
+                <i class="fas fa-${icon}"></i>
+                <span>${message}</span>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // 3秒后自动消失
+            setTimeout(() => {
+                notification.style.animation = 'slideOutRight 0.3s ease';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // 复制到剪贴板
+        function copyToClipboard(text) {
+            if (navigator.clipboard && window.isSecureContext) {
+                return navigator.clipboard.writeText(text).then(() => {
+                    showNotification('已复制到剪贴板');
+                    return true;
+                }).catch(err => {
+                    console.error('复制失败:', err);
+                    return copyFallback(text);
+                });
+            } else {
+                return copyFallback(text);
+            }
+        }
+
+        function copyFallback(text) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                if (successful) {
+                    showNotification('已复制到剪贴板');
+                    return true;
+                } else {
+                    showNotification('复制失败，请手动复制', 'error');
+                    return false;
+                }
+            } catch (err) {
+                document.body.removeChild(textArea);
+                showNotification('复制失败，请手动复制', 'error');
+                return false;
+            }
+        }
+
+        // 添加CSS动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOutRight {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+            
+            .input-error {
+                border-color: #e74c3c !important;
+                box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+            }
+            
+            .input-success {
+                border-color: #27ae60 !important;
+                box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1) !important;
+            }
+            
+            .input-warning {
+                border-color: #f39c12 !important;
+                box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1) !important;
+            }
+            
+            .char-counter {
+                font-size: 12px;
+                color: #666;
+                text-align: right;
+                margin-top: 5px;
+            }
+            
+            .tooltip {
+                animation: fadeIn 0.2s ease;
+            }
+            
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

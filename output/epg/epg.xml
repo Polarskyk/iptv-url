@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<tv date="20260802095219 +0800">
+<tv date="20260802120540 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -7037,5 +7037,1922 @@
 	</programme>
 	<programme channel="广州综合" start="20260802235500 +0800" stop="20260802235959 +0800">
 		<title lang="zh">真情追踪</title>
+	</programme>
+	<channel id="佛山综合">
+		<display-name lang="zh">佛山综合</display-name>
+	</channel>
+	<programme channel="佛山综合" start="20260802070200 +0800" stop="20260802071500 +0800">
+		<title lang="zh">禅城新闻</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802071500 +0800" stop="20260802072800 +0800">
+		<title lang="zh">聚集禅城</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802072800 +0800" stop="20260802080500 +0800">
+		<title lang="zh">味道佛山美味精选</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802080500 +0800" stop="20260802112800 +0800">
+		<title lang="zh">粤剧大观</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802112800 +0800" stop="20260802120000 +0800">
+		<title lang="zh">七十二家房客</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802120000 +0800" stop="20260802121500 +0800">
+		<title lang="zh">禅城新闻</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802121500 +0800" stop="20260802122800 +0800">
+		<title lang="zh">聚集禅城</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802122800 +0800" stop="20260802130500 +0800">
+		<title lang="zh">味道佛山美味精选</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802130500 +0800" stop="20260802150000 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802150000 +0800" stop="20260802165000 +0800">
+		<title lang="zh">电影时光</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802165000 +0800" stop="20260802181500 +0800">
+		<title lang="zh">七十二家房客</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802181500 +0800" stop="20260802190000 +0800">
+		<title lang="zh">味道佛山美味精选</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802190000 +0800" stop="20260802193300 +0800">
+		<title lang="zh">新闻联播</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802193300 +0800" stop="20260802195000 +0800">
+		<title lang="zh">禅城新闻</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802195000 +0800" stop="20260802201000 +0800">
+		<title lang="zh">佛山商道</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802201000 +0800" stop="20260802203000 +0800">
+		<title lang="zh">健康大财富</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802203000 +0800" stop="20260802210000 +0800">
+		<title lang="zh">六点半新闻</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802210000 +0800" stop="20260802211200 +0800">
+		<title lang="zh">身边的榜样</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802211200 +0800" stop="20260802211800 +0800">
+		<title lang="zh">国学讲坛</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802211800 +0800" stop="20260802213000 +0800">
+		<title lang="zh">禅城新闻</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802213000 +0800" stop="20260802220000 +0800">
+		<title lang="zh">经历</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802220000 +0800" stop="20260802221800 +0800">
+		<title lang="zh">光影时刻</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802221800 +0800" stop="20260802120000 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802120000 +0800" stop="20260802121500 +0800">
+		<title lang="zh">禅城新闻</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802121500 +0800" stop="20260802122800 +0800">
+		<title lang="zh">聚集禅城</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802122800 +0800" stop="20260802130500 +0800">
+		<title lang="zh">味道佛山美味精选</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802130500 +0800" stop="20260802150000 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802150000 +0800" stop="20260802165000 +0800">
+		<title lang="zh">电影时光</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802165000 +0800" stop="20260802181500 +0800">
+		<title lang="zh">七十二家房客</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802181500 +0800" stop="20260802190000 +0800">
+		<title lang="zh">味道佛山美味精选</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802190000 +0800" stop="20260802193300 +0800">
+		<title lang="zh">新闻联播</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802193300 +0800" stop="20260802195000 +0800">
+		<title lang="zh">禅城新闻</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802195000 +0800" stop="20260802201000 +0800">
+		<title lang="zh">佛山商道</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802201000 +0800" stop="20260802203000 +0800">
+		<title lang="zh">健康大财富</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802203000 +0800" stop="20260802210000 +0800">
+		<title lang="zh">六点半新闻</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802210000 +0800" stop="20260802211200 +0800">
+		<title lang="zh">身边的榜样</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802211200 +0800" stop="20260802211800 +0800">
+		<title lang="zh">国学讲坛</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802211800 +0800" stop="20260802213000 +0800">
+		<title lang="zh">禅城新闻</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802213000 +0800" stop="20260802220000 +0800">
+		<title lang="zh">经历</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802220000 +0800" stop="20260802221800 +0800">
+		<title lang="zh">光影时刻</title>
+	</programme>
+	<programme channel="佛山综合" start="20260802221800 +0800" stop="20260802235900 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<channel id="广州竞赛">
+		<display-name lang="zh">广州竞赛</display-name>
+	</channel>
+	<programme channel="广州竞赛" start="20260802070000 +0800" stop="20260802073000 +0800">
+		<title lang="zh">世界体育</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802073000 +0800" stop="20260802094500 +0800">
+		<title lang="zh">澳式橄榄球联赛</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802094500 +0800" stop="20260802101500 +0800">
+		<title lang="zh">缤纷生活街专题</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802101500 +0800" stop="20260802111500 +0800">
+		<title lang="zh">体育赛事</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802111500 +0800" stop="20260802114500 +0800">
+		<title lang="zh">平安跑世界</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802114500 +0800" stop="20260802120000 +0800">
+		<title lang="zh">竞赛快讯</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802120000 +0800" stop="20260802130000 +0800">
+		<title lang="zh">体育赛事</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802130000 +0800" stop="20260802131500 +0800">
+		<title lang="zh">竞赛快讯</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802131500 +0800" stop="20260802140000 +0800">
+		<title lang="zh">体育赛事</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802140000 +0800" stop="20260802141500 +0800">
+		<title lang="zh">竞赛快讯</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802141500 +0800" stop="20260802144500 +0800">
+		<title lang="zh">缤纷生活街专题</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802144500 +0800" stop="20260802170000 +0800">
+		<title lang="zh">体育赛事</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802170000 +0800" stop="20260802173000 +0800">
+		<title lang="zh">缤纷生活街专题</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802173000 +0800" stop="20260802190000 +0800">
+		<title lang="zh">体育赛事</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802190000 +0800" stop="20260802193000 +0800">
+		<title lang="zh">体坛点击</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802193000 +0800" stop="20260802200000 +0800">
+		<title lang="zh">平安跑世界</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802200000 +0800" stop="20260802220000 +0800">
+		<title lang="zh">体育赛事</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802220000 +0800" stop="20260802233000 +0800">
+		<title lang="zh">体育赛事</title>
+	</programme>
+	<programme channel="广州竞赛" start="20260802233000 +0800" stop="20260802235900 +0800">
+		<title lang="zh">一触即发</title>
+	</programme>
+	<channel id="汕头综合">
+		<display-name lang="zh">汕头综合</display-name>
+	</channel>
+	<programme channel="汕头综合" start="20260802000000 +0800" stop="20260802005000 +0800">
+		<title lang="zh">潮汕新闻联播</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802005000 +0800" stop="20260802023000 +0800">
+		<title lang="zh">连续剧</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802023000 +0800" stop="20260802070200 +0800">
+		<title lang="zh">连续剧</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802070200 +0800" stop="20260802080000 +0800">
+		<title lang="zh">重播昨天今日视线</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802080000 +0800" stop="20260802082000 +0800">
+		<title lang="zh">重播双响炮</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802082000 +0800" stop="20260802090000 +0800">
+		<title lang="zh">重播昨天汕头新闻</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802090000 +0800" stop="20260802120000 +0800">
+		<title lang="zh">连续剧</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802120000 +0800" stop="20260802123000 +0800">
+		<title lang="zh">重播昨天汕头新闻</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802123000 +0800" stop="20260802132500 +0800">
+		<title lang="zh">重播昨天今日视线</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802132500 +0800" stop="20260802135000 +0800">
+		<title lang="zh">双响炮</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802135000 +0800" stop="20260802142500 +0800">
+		<title lang="zh">厝边头尾</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802142500 +0800" stop="20260802183500 +0800">
+		<title lang="zh">潮剧</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802183500 +0800" stop="20260802193300 +0800">
+		<title lang="zh">法治中国</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802193300 +0800" stop="20260802200000 +0800">
+		<title lang="zh">汕头新闻(普语)</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802200000 +0800" stop="20260802220000 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802220000 +0800" stop="20260802230000 +0800">
+		<title lang="zh">今日视线(重播)</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802230000 +0800" stop="20260802232000 +0800">
+		<title lang="zh">双响炮</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802232000 +0800" stop="20260802120000 +0800">
+		<title lang="zh">潮汕新闻联播</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802120000 +0800" stop="20260802123000 +0800">
+		<title lang="zh">重播昨天汕头新闻</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802123000 +0800" stop="20260802132500 +0800">
+		<title lang="zh">重播昨天今日视线</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802132500 +0800" stop="20260802135000 +0800">
+		<title lang="zh">双响炮</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802135000 +0800" stop="20260802142500 +0800">
+		<title lang="zh">厝边头尾</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802142500 +0800" stop="20260802183500 +0800">
+		<title lang="zh">潮剧</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802183500 +0800" stop="20260802193300 +0800">
+		<title lang="zh">法治中国</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802193300 +0800" stop="20260802200000 +0800">
+		<title lang="zh">汕头新闻(普语)</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802200000 +0800" stop="20260802220000 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802220000 +0800" stop="20260802230000 +0800">
+		<title lang="zh">今日视线(重播)</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802230000 +0800" stop="20260802232000 +0800">
+		<title lang="zh">双响炮</title>
+	</programme>
+	<programme channel="汕头综合" start="20260802232000 +0800" stop="20260802235900 +0800">
+		<title lang="zh">潮汕新闻联播</title>
+	</programme>
+	<channel id="江门综合">
+		<display-name lang="zh">江门综合</display-name>
+	</channel>
+	<programme channel="江门综合" start="20260802070700 +0800" stop="20260802073200 +0800">
+		<title lang="zh">世界多美丽</title>
+	</programme>
+	<programme channel="江门综合" start="20260802073200 +0800" stop="20260802083000 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<programme channel="江门综合" start="20260802083000 +0800" stop="20260802084800 +0800">
+		<title lang="zh">江门新时空</title>
+	</programme>
+	<programme channel="江门综合" start="20260802084800 +0800" stop="20260802091500 +0800">
+		<title lang="zh">科普大篷车</title>
+	</programme>
+	<programme channel="江门综合" start="20260802091500 +0800" stop="20260802114000 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<programme channel="江门综合" start="20260802114000 +0800" stop="20260802141800 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<programme channel="江门综合" start="20260802141800 +0800" stop="20260802160000 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<programme channel="江门综合" start="20260802160000 +0800" stop="20260802184000 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<programme channel="江门综合" start="20260802184000 +0800" stop="20260802190000 +0800">
+		<title lang="zh">五邑警视</title>
+	</programme>
+	<programme channel="江门综合" start="20260802190000 +0800" stop="20260802194000 +0800">
+		<title lang="zh">转播中央新闻联播</title>
+	</programme>
+	<programme channel="江门综合" start="20260802194000 +0800" stop="20260802221800 +0800">
+		<title lang="zh">合家欢剧场</title>
+	</programme>
+	<programme channel="江门综合" start="20260802221800 +0800" stop="20260802223800 +0800">
+		<title lang="zh">新闻共同睇</title>
+	</programme>
+	<programme channel="江门综合" start="20260802223800 +0800" stop="20260802231000 +0800">
+		<title lang="zh">科普大篷车</title>
+	</programme>
+	<programme channel="江门综合" start="20260802231000 +0800" stop="20260802233500 +0800">
+		<title lang="zh">江门新时空</title>
+	</programme>
+	<programme channel="江门综合" start="20260802233500 +0800" stop="20260802234200 +0800">
+		<title lang="zh">侨都气象</title>
+	</programme>
+	<programme channel="江门综合" start="20260802234200 +0800" stop="20260802141800 +0800">
+		<title lang="zh">世界多美丽</title>
+	</programme>
+	<programme channel="江门综合" start="20260802141800 +0800" stop="20260802160000 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<programme channel="江门综合" start="20260802160000 +0800" stop="20260802184000 +0800">
+		<title lang="zh">剧场</title>
+	</programme>
+	<programme channel="江门综合" start="20260802184000 +0800" stop="20260802190000 +0800">
+		<title lang="zh">五邑警视</title>
+	</programme>
+	<programme channel="江门综合" start="20260802190000 +0800" stop="20260802194000 +0800">
+		<title lang="zh">转播中央新闻联播</title>
+	</programme>
+	<programme channel="江门综合" start="20260802194000 +0800" stop="20260802221800 +0800">
+		<title lang="zh">合家欢剧场</title>
+	</programme>
+	<programme channel="江门综合" start="20260802221800 +0800" stop="20260802223800 +0800">
+		<title lang="zh">新闻共同睇</title>
+	</programme>
+	<programme channel="江门综合" start="20260802223800 +0800" stop="20260802231000 +0800">
+		<title lang="zh">科普大篷车</title>
+	</programme>
+	<programme channel="江门综合" start="20260802231000 +0800" stop="20260802233500 +0800">
+		<title lang="zh">江门新时空</title>
+	</programme>
+	<programme channel="江门综合" start="20260802233500 +0800" stop="20260802234200 +0800">
+		<title lang="zh">侨都气象</title>
+	</programme>
+	<programme channel="江门综合" start="20260802234200 +0800" stop="20260802235900 +0800">
+		<title lang="zh">世界多美丽</title>
+	</programme>
+	<channel id="茂名公共">
+		<display-name lang="zh">茂名公共</display-name>
+	</channel>
+	<programme channel="茂名公共" start="20260802002000 +0800" stop="20260802181000 +0800">
+		<title lang="zh">荔园剧场</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802181000 +0800" stop="20260802200000 +0800">
+		<title lang="zh">动画片</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802200000 +0800" stop="20260802202100 +0800">
+		<title lang="zh">一线新闻</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802202100 +0800" stop="20260802204000 +0800">
+		<title lang="zh">百姓连线</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802204000 +0800" stop="20260802230500 +0800">
+		<title lang="zh">大连播</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802230500 +0800" stop="20260802233000 +0800">
+		<title lang="zh">影视界</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802233000 +0800" stop="20260802235000 +0800">
+		<title lang="zh">茂名新闻联播</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802235000 +0800" stop="20260802181000 +0800">
+		<title lang="zh">荔园剧场</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802181000 +0800" stop="20260802200000 +0800">
+		<title lang="zh">动画片</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802200000 +0800" stop="20260802202100 +0800">
+		<title lang="zh">一线新闻</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802202100 +0800" stop="20260802204000 +0800">
+		<title lang="zh">百姓连线</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802204000 +0800" stop="20260802230500 +0800">
+		<title lang="zh">大连播</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802230500 +0800" stop="20260802233000 +0800">
+		<title lang="zh">影视界</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802233000 +0800" stop="20260802235000 +0800">
+		<title lang="zh">茂名新闻联播</title>
+	</programme>
+	<programme channel="茂名公共" start="20260802235000 +0800" stop="20260802235900 +0800">
+		<title lang="zh">荔园剧场</title>
+	</programme>
+	<channel id="茂名综合">
+		<display-name lang="zh">茂名综合</display-name>
+	</channel>
+	<programme channel="茂名综合" start="20260802000000 +0800" stop="20260802184300 +0800">
+		<title lang="zh">晚间剧场</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802184300 +0800" stop="20260802190000 +0800">
+		<title lang="zh">百姓连线</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802190000 +0800" stop="20260802193300 +0800">
+		<title lang="zh">转中央台新闻联播</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802193300 +0800" stop="20260802200000 +0800">
+		<title lang="zh">茂名新闻联播</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802200000 +0800" stop="20260802201400 +0800">
+		<title lang="zh">新闻聚焦</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802201400 +0800" stop="20260802221800 +0800">
+		<title lang="zh">天天剧场</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802221800 +0800" stop="20260802224500 +0800">
+		<title lang="zh">国际时装欣赏</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802224500 +0800" stop="20260802184300 +0800">
+		<title lang="zh">晚间剧场</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802184300 +0800" stop="20260802190000 +0800">
+		<title lang="zh">百姓连线</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802190000 +0800" stop="20260802193300 +0800">
+		<title lang="zh">转中央台新闻联播</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802193300 +0800" stop="20260802200000 +0800">
+		<title lang="zh">茂名新闻联播</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802200000 +0800" stop="20260802201400 +0800">
+		<title lang="zh">新闻聚焦</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802201400 +0800" stop="20260802221800 +0800">
+		<title lang="zh">天天剧场</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802221800 +0800" stop="20260802224500 +0800">
+		<title lang="zh">国际时装欣赏</title>
+	</programme>
+	<programme channel="茂名综合" start="20260802224500 +0800" stop="20260802235900 +0800">
+		<title lang="zh">晚间剧场</title>
+	</programme>
+	<channel id="广州影视">
+		<display-name lang="zh">广州影视</display-name>
+	</channel>
+	<programme channel="广州影视" start="20260727000000 +0800" stop="20260727060000 +0800">
+		<title lang="zh">欢迎来到麦乐村(20)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727060000 +0800" stop="20260727065300 +0800">
+		<title lang="zh">老农民(51)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727065300 +0800" stop="20260727074500 +0800">
+		<title lang="zh">老农民(52)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727074500 +0800" stop="20260727084100 +0800">
+		<title lang="zh">老农民(53)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727084100 +0800" stop="20260727092100 +0800">
+		<title lang="zh">桃花依旧笑春风(29)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727092100 +0800" stop="20260727093400 +0800">
+		<title lang="zh">今日汽车</title>
+	</programme>
+	<programme channel="广州影视" start="20260727093400 +0800" stop="20260727100600 +0800">
+		<title lang="zh">桃花依旧笑春风(30)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727100600 +0800" stop="20260727112000 +0800">
+		<title lang="zh">桃花依旧笑春风(31)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727112000 +0800" stop="20260727121100 +0800">
+		<title lang="zh">桃花依旧笑春风(32)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727121100 +0800" stop="20260727124700 +0800">
+		<title lang="zh">桃花依旧笑春风(33)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727124700 +0800" stop="20260727133700 +0800">
+		<title lang="zh">桃花依旧笑春风(34)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727133700 +0800" stop="20260727140800 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260727140800 +0800" stop="20260727141600 +0800">
+		<title lang="zh">老友请就位</title>
+	</programme>
+	<programme channel="广州影视" start="20260727141600 +0800" stop="20260727150200 +0800">
+		<title lang="zh">桃花依旧笑春风(35)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727150200 +0800" stop="20260727154600 +0800">
+		<title lang="zh">桃花依旧笑春风(36)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727154600 +0800" stop="20260727162700 +0800">
+		<title lang="zh">桃花依旧笑春风(37)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727162700 +0800" stop="20260727170700 +0800">
+		<title lang="zh">桃花依旧笑春风(38)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727170700 +0800" stop="20260727172000 +0800">
+		<title lang="zh">剧说</title>
+	</programme>
+	<programme channel="广州影视" start="20260727172000 +0800" stop="20260727181000 +0800">
+		<title lang="zh">桃花依旧笑春风(39)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727181000 +0800" stop="20260727182000 +0800">
+		<title lang="zh">老友请就位</title>
+	</programme>
+	<programme channel="广州影视" start="20260727182000 +0800" stop="20260727183100 +0800">
+		<title lang="zh">进击的皇后(16)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727183100 +0800" stop="20260727184600 +0800">
+		<title lang="zh">进击的皇后(17)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727184600 +0800" stop="20260727193200 +0800">
+		<title lang="zh">老农民(54)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727193200 +0800" stop="20260727194400 +0800">
+		<title lang="zh">今日新看点</title>
+	</programme>
+	<programme channel="广州影视" start="20260727194400 +0800" stop="20260727202800 +0800">
+		<title lang="zh">老农民(55)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727202800 +0800" stop="20260727211100 +0800">
+		<title lang="zh">老农民(56)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727211100 +0800" stop="20260727214300 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260727214300 +0800" stop="20260727223000 +0800">
+		<title lang="zh">欢迎来到麦乐村(21)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727223000 +0800" stop="20260727231700 +0800">
+		<title lang="zh">欢迎来到麦乐村(22)</title>
+	</programme>
+	<programme channel="广州影视" start="20260727231700 +0800" stop="20260727235900 +0800">
+		<title lang="zh">欢迎来到麦乐村(23)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728000000 +0800" stop="20260728060000 +0800">
+		<title lang="zh">欢迎来到麦乐村(23)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728060000 +0800" stop="20260728065400 +0800">
+		<title lang="zh">老农民(54)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728065400 +0800" stop="20260728074800 +0800">
+		<title lang="zh">老农民(55)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728074800 +0800" stop="20260728084700 +0800">
+		<title lang="zh">老农民(56)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728084700 +0800" stop="20260728092200 +0800">
+		<title lang="zh">桃花依旧笑春风(40)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728092200 +0800" stop="20260728100400 +0800">
+		<title lang="zh">桃花依旧笑春风(41)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728100400 +0800" stop="20260728112000 +0800">
+		<title lang="zh">桃花依旧笑春风(42)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728112000 +0800" stop="20260728121100 +0800">
+		<title lang="zh">桃花依旧笑春风(43)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728121100 +0800" stop="20260728124600 +0800">
+		<title lang="zh">桃花依旧笑春风(44)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728124600 +0800" stop="20260728133900 +0800">
+		<title lang="zh">桃花依旧笑春风(45)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728133900 +0800" stop="20260728140100 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260728140100 +0800" stop="20260728140900 +0800">
+		<title lang="zh">老友请就位</title>
+	</programme>
+	<programme channel="广州影视" start="20260728140900 +0800" stop="20260728145400 +0800">
+		<title lang="zh">桃花依旧笑春风(46)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728145400 +0800" stop="20260728154300 +0800">
+		<title lang="zh">桃花依旧笑春风(47)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728154300 +0800" stop="20260728162700 +0800">
+		<title lang="zh">桃花依旧笑春风(48)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728162700 +0800" stop="20260728170000 +0800">
+		<title lang="zh">桃花依旧笑春风(49)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728170000 +0800" stop="20260728170700 +0800">
+		<title lang="zh">剧说</title>
+	</programme>
+	<programme channel="广州影视" start="20260728170700 +0800" stop="20260728172000 +0800">
+		<title lang="zh">今日新看点</title>
+	</programme>
+	<programme channel="广州影视" start="20260728172000 +0800" stop="20260728181000 +0800">
+		<title lang="zh">桃花依旧笑春风(50)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728181000 +0800" stop="20260728181800 +0800">
+		<title lang="zh">老友请就位</title>
+	</programme>
+	<programme channel="广州影视" start="20260728181800 +0800" stop="20260728183500 +0800">
+		<title lang="zh">进击的皇后(18)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728183500 +0800" stop="20260728184800 +0800">
+		<title lang="zh">进击的皇后Ⅱ(1)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728184800 +0800" stop="20260728193200 +0800">
+		<title lang="zh">老农民(57)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728193200 +0800" stop="20260728194400 +0800">
+		<title lang="zh">今日新看点</title>
+	</programme>
+	<programme channel="广州影视" start="20260728194400 +0800" stop="20260728202800 +0800">
+		<title lang="zh">老农民(58)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728202800 +0800" stop="20260728211000 +0800">
+		<title lang="zh">老农民(59)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728211000 +0800" stop="20260728214000 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260728214000 +0800" stop="20260728222600 +0800">
+		<title lang="zh">欢迎来到麦乐村(24)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728222600 +0800" stop="20260728231400 +0800">
+		<title lang="zh">欢迎来到麦乐村(25)</title>
+	</programme>
+	<programme channel="广州影视" start="20260728231400 +0800" stop="20260728235900 +0800">
+		<title lang="zh">欢迎来到麦乐村(26)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729000000 +0800" stop="20260729060000 +0800">
+		<title lang="zh">欢迎来到麦乐村(26)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729060000 +0800" stop="20260729065300 +0800">
+		<title lang="zh">老农民(57)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729065300 +0800" stop="20260729074800 +0800">
+		<title lang="zh">老农民(58)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729074800 +0800" stop="20260729084500 +0800">
+		<title lang="zh">老农民(59)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729084500 +0800" stop="20260729092700 +0800">
+		<title lang="zh">桃花依旧笑春风(51)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729092700 +0800" stop="20260729100000 +0800">
+		<title lang="zh">桃花依旧笑春风(52)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729100000 +0800" stop="20260729112000 +0800">
+		<title lang="zh">桃花依旧笑春风(53)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729112000 +0800" stop="20260729121100 +0800">
+		<title lang="zh">桃花依旧笑春风(54)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729121100 +0800" stop="20260729124400 +0800">
+		<title lang="zh">桃花依旧笑春风(55)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729124400 +0800" stop="20260729134100 +0800">
+		<title lang="zh">桃花依旧笑春风(56)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729134100 +0800" stop="20260729135900 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260729135900 +0800" stop="20260729141000 +0800">
+		<title lang="zh">老友请就位</title>
+	</programme>
+	<programme channel="广州影视" start="20260729141000 +0800" stop="20260729145500 +0800">
+		<title lang="zh">桃花依旧笑春风(57)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729145500 +0800" stop="20260729154000 +0800">
+		<title lang="zh">桃花依旧笑春风(58)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729154000 +0800" stop="20260729162400 +0800">
+		<title lang="zh">桃花依旧笑春风(59)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729162400 +0800" stop="20260729170100 +0800">
+		<title lang="zh">桃花依旧笑春风(60)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729170100 +0800" stop="20260729170600 +0800">
+		<title lang="zh">剧说</title>
+	</programme>
+	<programme channel="广州影视" start="20260729170600 +0800" stop="20260729172000 +0800">
+		<title lang="zh">今日新看点</title>
+	</programme>
+	<programme channel="广州影视" start="20260729172000 +0800" stop="20260729181000 +0800">
+		<title lang="zh">桃花依旧笑春风(61)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729181000 +0800" stop="20260729181900 +0800">
+		<title lang="zh">老友请就位</title>
+	</programme>
+	<programme channel="广州影视" start="20260729181900 +0800" stop="20260729183100 +0800">
+		<title lang="zh">进击的皇后Ⅱ(2)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729183100 +0800" stop="20260729184600 +0800">
+		<title lang="zh">进击的皇后Ⅱ(3)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729184600 +0800" stop="20260729193100 +0800">
+		<title lang="zh">老农民(60)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729193100 +0800" stop="20260729194300 +0800">
+		<title lang="zh">今日新看点</title>
+	</programme>
+	<programme channel="广州影视" start="20260729194300 +0800" stop="20260729202800 +0800">
+		<title lang="zh">义者无敌(1)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729202800 +0800" stop="20260729211100 +0800">
+		<title lang="zh">义者无敌(2)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729211100 +0800" stop="20260729214600 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260729214600 +0800" stop="20260729223100 +0800">
+		<title lang="zh">欢迎来到麦乐村(27)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729223100 +0800" stop="20260729223600 +0800">
+		<title lang="zh">喜闻乐见</title>
+	</programme>
+	<programme channel="广州影视" start="20260729223600 +0800" stop="20260729232300 +0800">
+		<title lang="zh">欢迎来到麦乐村(28)</title>
+	</programme>
+	<programme channel="广州影视" start="20260729232300 +0800" stop="20260729235900 +0800">
+		<title lang="zh">欢迎来到麦乐村(29)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730000000 +0800" stop="20260730060000 +0800">
+		<title lang="zh">欢迎来到麦乐村(29)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730060000 +0800" stop="20260730065300 +0800">
+		<title lang="zh">老农民(60)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730065300 +0800" stop="20260730074800 +0800">
+		<title lang="zh">义者无敌(1)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730074800 +0800" stop="20260730084600 +0800">
+		<title lang="zh">义者无敌(2)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730084600 +0800" stop="20260730092700 +0800">
+		<title lang="zh">桃花依旧笑春风(62)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730092700 +0800" stop="20260730100300 +0800">
+		<title lang="zh">桃花依旧笑春风(63)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730100300 +0800" stop="20260730112000 +0800">
+		<title lang="zh">桃花依旧笑春风(64)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730112000 +0800" stop="20260730121100 +0800">
+		<title lang="zh">桃花依旧笑春风(65)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730121100 +0800" stop="20260730124500 +0800">
+		<title lang="zh">桃花依旧笑春风(66)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730124500 +0800" stop="20260730134000 +0800">
+		<title lang="zh">桃花依旧笑春风(67)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730134000 +0800" stop="20260730135900 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260730135900 +0800" stop="20260730141000 +0800">
+		<title lang="zh">老友请就位</title>
+	</programme>
+	<programme channel="广州影视" start="20260730141000 +0800" stop="20260730145500 +0800">
+		<title lang="zh">桃花依旧笑春风(68)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730145500 +0800" stop="20260730154200 +0800">
+		<title lang="zh">桃花依旧笑春风(69)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730154200 +0800" stop="20260730162600 +0800">
+		<title lang="zh">桃花依旧笑春风(70)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730162600 +0800" stop="20260730170000 +0800">
+		<title lang="zh">桃花依旧笑春风(71)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730170000 +0800" stop="20260730170600 +0800">
+		<title lang="zh">剧说</title>
+	</programme>
+	<programme channel="广州影视" start="20260730170600 +0800" stop="20260730172000 +0800">
+		<title lang="zh">今日新看点</title>
+	</programme>
+	<programme channel="广州影视" start="20260730172000 +0800" stop="20260730181000 +0800">
+		<title lang="zh">桃花依旧笑春风(72)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730181000 +0800" stop="20260730182000 +0800">
+		<title lang="zh">老友请就位</title>
+	</programme>
+	<programme channel="广州影视" start="20260730182000 +0800" stop="20260730183200 +0800">
+		<title lang="zh">进击的皇后Ⅱ(4)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730183200 +0800" stop="20260730184600 +0800">
+		<title lang="zh">进击的皇后Ⅱ(5)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730184600 +0800" stop="20260730193200 +0800">
+		<title lang="zh">义者无敌(3)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730193200 +0800" stop="20260730194400 +0800">
+		<title lang="zh">今日新看点</title>
+	</programme>
+	<programme channel="广州影视" start="20260730194400 +0800" stop="20260730202800 +0800">
+		<title lang="zh">义者无敌(4)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730202800 +0800" stop="20260730211100 +0800">
+		<title lang="zh">义者无敌(5)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730211100 +0800" stop="20260730214400 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260730214400 +0800" stop="20260730223100 +0800">
+		<title lang="zh">欢迎来到麦乐村(30)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730223100 +0800" stop="20260730231800 +0800">
+		<title lang="zh">欢迎来到麦乐村(31)</title>
+	</programme>
+	<programme channel="广州影视" start="20260730231800 +0800" stop="20260730235900 +0800">
+		<title lang="zh">欢迎来到麦乐村(32)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731000000 +0800" stop="20260731060000 +0800">
+		<title lang="zh">欢迎来到麦乐村(32)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731060000 +0800" stop="20260731065400 +0800">
+		<title lang="zh">义者无敌(3)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731065400 +0800" stop="20260731074800 +0800">
+		<title lang="zh">义者无敌(4)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731074800 +0800" stop="20260731084400 +0800">
+		<title lang="zh">义者无敌(5)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731084400 +0800" stop="20260731092600 +0800">
+		<title lang="zh">桃花依旧笑春风(73)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731092600 +0800" stop="20260731100200 +0800">
+		<title lang="zh">桃花依旧笑春风(74)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731100200 +0800" stop="20260731112000 +0800">
+		<title lang="zh">桃花依旧笑春风(75)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731112000 +0800" stop="20260731121200 +0800">
+		<title lang="zh">桃花依旧笑春风(76)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731121200 +0800" stop="20260731124600 +0800">
+		<title lang="zh">桃花依旧笑春风(77)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731124600 +0800" stop="20260731133900 +0800">
+		<title lang="zh">桃花依旧笑春风(78)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731133900 +0800" stop="20260731135600 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260731135600 +0800" stop="20260731140400 +0800">
+		<title lang="zh">老友请就位</title>
+	</programme>
+	<programme channel="广州影视" start="20260731140400 +0800" stop="20260731145100 +0800">
+		<title lang="zh">桃花依旧笑春风(79)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731145100 +0800" stop="20260731153900 +0800">
+		<title lang="zh">桃花依旧笑春风(80)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731153900 +0800" stop="20260731162300 +0800">
+		<title lang="zh">桃花依旧笑春风(81)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731162300 +0800" stop="20260731165900 +0800">
+		<title lang="zh">桃花依旧笑春风(82)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731165900 +0800" stop="20260731170400 +0800">
+		<title lang="zh">剧说</title>
+	</programme>
+	<programme channel="广州影视" start="20260731170400 +0800" stop="20260731172000 +0800">
+		<title lang="zh">今日新看点</title>
+	</programme>
+	<programme channel="广州影视" start="20260731172000 +0800" stop="20260731181000 +0800">
+		<title lang="zh">桃花依旧笑春风(83)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731181000 +0800" stop="20260731181900 +0800">
+		<title lang="zh">老友请就位</title>
+	</programme>
+	<programme channel="广州影视" start="20260731181900 +0800" stop="20260731183200 +0800">
+		<title lang="zh">进击的皇后Ⅱ(6)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731183200 +0800" stop="20260731184600 +0800">
+		<title lang="zh">进击的皇后Ⅱ(7)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731184600 +0800" stop="20260731193100 +0800">
+		<title lang="zh">义者无敌(6)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731193100 +0800" stop="20260731194400 +0800">
+		<title lang="zh">今日新看点</title>
+	</programme>
+	<programme channel="广州影视" start="20260731194400 +0800" stop="20260731202900 +0800">
+		<title lang="zh">义者无敌(7)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731202900 +0800" stop="20260731211100 +0800">
+		<title lang="zh">义者无敌(8)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731211100 +0800" stop="20260731214400 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260731214400 +0800" stop="20260731223000 +0800">
+		<title lang="zh">欢迎来到麦乐村(33)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731223000 +0800" stop="20260731232000 +0800">
+		<title lang="zh">欢迎来到麦乐村(34)</title>
+	</programme>
+	<programme channel="广州影视" start="20260731232000 +0800" stop="20260731235900 +0800">
+		<title lang="zh">欢迎来到麦乐村(35)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801000000 +0800" stop="20260801060000 +0800">
+		<title lang="zh">欢迎来到麦乐村(35)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801060000 +0800" stop="20260801065300 +0800">
+		<title lang="zh">义者无敌(6)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801065300 +0800" stop="20260801074600 +0800">
+		<title lang="zh">义者无敌(7)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801074600 +0800" stop="20260801084500 +0800">
+		<title lang="zh">义者无敌(8)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801084500 +0800" stop="20260801092700 +0800">
+		<title lang="zh">桃花依旧笑春风(84)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801092700 +0800" stop="20260801100200 +0800">
+		<title lang="zh">老农民(1)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801100200 +0800" stop="20260801112000 +0800">
+		<title lang="zh">老农民(2)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801112000 +0800" stop="20260801121000 +0800">
+		<title lang="zh">老农民(3)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801121000 +0800" stop="20260801123900 +0800">
+		<title lang="zh">科学朋友圈</title>
+	</programme>
+	<programme channel="广州影视" start="20260801123900 +0800" stop="20260801133400 +0800">
+		<title lang="zh">老农民(4)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801133400 +0800" stop="20260801135200 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260801135200 +0800" stop="20260801140000 +0800">
+		<title lang="zh">老友请就位</title>
+	</programme>
+	<programme channel="广州影视" start="20260801140000 +0800" stop="20260801144300 +0800">
+		<title lang="zh">老农民(5)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801144300 +0800" stop="20260801152500 +0800">
+		<title lang="zh">老农民(6)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801152500 +0800" stop="20260801154800 +0800">
+		<title lang="zh">拾光筑梦营</title>
+	</programme>
+	<programme channel="广州影视" start="20260801154800 +0800" stop="20260801162900 +0800">
+		<title lang="zh">老农民(7)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801162900 +0800" stop="20260801170200 +0800">
+		<title lang="zh">老农民(8)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801170200 +0800" stop="20260801170700 +0800">
+		<title lang="zh">剧说</title>
+	</programme>
+	<programme channel="广州影视" start="20260801170700 +0800" stop="20260801172000 +0800">
+		<title lang="zh">今日新看点</title>
+	</programme>
+	<programme channel="广州影视" start="20260801172000 +0800" stop="20260801181000 +0800">
+		<title lang="zh">老农民(9)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801181000 +0800" stop="20260801183700 +0800">
+		<title lang="zh">科学朋友圈</title>
+	</programme>
+	<programme channel="广州影视" start="20260801183700 +0800" stop="20260801185000 +0800">
+		<title lang="zh">进击的皇后Ⅱ(8)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801185000 +0800" stop="20260801190300 +0800">
+		<title lang="zh">进击的皇后Ⅱ(9)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801190300 +0800" stop="20260801191700 +0800">
+		<title lang="zh">进击的皇后Ⅱ(10)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801191700 +0800" stop="20260801200100 +0800">
+		<title lang="zh">义者无敌(9)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801200100 +0800" stop="20260801204600 +0800">
+		<title lang="zh">义者无敌(10)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801204600 +0800" stop="20260801212800 +0800">
+		<title lang="zh">义者无敌(11)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801212800 +0800" stop="20260801220000 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260801220000 +0800" stop="20260801222900 +0800">
+		<title lang="zh">今日汽车</title>
+	</programme>
+	<programme channel="广州影视" start="20260801222900 +0800" stop="20260801231700 +0800">
+		<title lang="zh">虎刺红(1)</title>
+	</programme>
+	<programme channel="广州影视" start="20260801231700 +0800" stop="20260801235900 +0800">
+		<title lang="zh">虎刺红(2)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802000000 +0800" stop="20260802055500 +0800">
+		<title lang="zh">虎刺红(2)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802055500 +0800" stop="20260802064800 +0800">
+		<title lang="zh">义者无敌(9)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802064800 +0800" stop="20260802074100 +0800">
+		<title lang="zh">义者无敌(10)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802074100 +0800" stop="20260802083600 +0800">
+		<title lang="zh">义者无敌(11)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802083600 +0800" stop="20260802091600 +0800">
+		<title lang="zh">老农民(10)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802091600 +0800" stop="20260802092800 +0800">
+		<title lang="zh">今日汽车</title>
+	</programme>
+	<programme channel="广州影视" start="20260802092800 +0800" stop="20260802095800 +0800">
+		<title lang="zh">老农民(11)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802095800 +0800" stop="20260802112000 +0800">
+		<title lang="zh">老农民(12)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802112000 +0800" stop="20260802121000 +0800">
+		<title lang="zh">老农民(13)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802121000 +0800" stop="20260802123800 +0800">
+		<title lang="zh">科学朋友圈</title>
+	</programme>
+	<programme channel="广州影视" start="20260802123800 +0800" stop="20260802133100 +0800">
+		<title lang="zh">老农民(14)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802133100 +0800" stop="20260802140300 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260802140300 +0800" stop="20260802144600 +0800">
+		<title lang="zh">老农民(15)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802144600 +0800" stop="20260802152900 +0800">
+		<title lang="zh">老农民(16)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802152900 +0800" stop="20260802153400 +0800">
+		<title lang="zh">剧说</title>
+	</programme>
+	<programme channel="广州影视" start="20260802153400 +0800" stop="20260802161400 +0800">
+		<title lang="zh">老农民(17)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802161400 +0800" stop="20260802164700 +0800">
+		<title lang="zh">老农民(18)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802164700 +0800" stop="20260802172000 +0800">
+		<title lang="zh">老农民(19)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802172000 +0800" stop="20260802181000 +0800">
+		<title lang="zh">老农民(20)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802181000 +0800" stop="20260802181900 +0800">
+		<title lang="zh">老友请就位</title>
+	</programme>
+	<programme channel="广州影视" start="20260802181900 +0800" stop="20260802183200 +0800">
+		<title lang="zh">进击的皇后Ⅱ(11)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802183200 +0800" stop="20260802184400 +0800">
+		<title lang="zh">进击的皇后Ⅱ(12)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802184400 +0800" stop="20260802185800 +0800">
+		<title lang="zh">进击的皇后Ⅱ(13)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802185800 +0800" stop="20260802194200 +0800">
+		<title lang="zh">义者无敌(12)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802194200 +0800" stop="20260802194900 +0800">
+		<title lang="zh">剧说</title>
+	</programme>
+	<programme channel="广州影视" start="20260802194900 +0800" stop="20260802203300 +0800">
+		<title lang="zh">义者无敌(13)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802203300 +0800" stop="20260802211500 +0800">
+		<title lang="zh">义者无敌(14)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802211500 +0800" stop="20260802220000 +0800">
+		<title lang="zh">我的装修有话说</title>
+	</programme>
+	<programme channel="广州影视" start="20260802220000 +0800" stop="20260802221500 +0800">
+		<title lang="zh">今日汽车</title>
+	</programme>
+	<programme channel="广州影视" start="20260802221500 +0800" stop="20260802230200 +0800">
+		<title lang="zh">虎刺红(3)</title>
+	</programme>
+	<programme channel="广州影视" start="20260802230200 +0800" stop="20260802235900 +0800">
+		<title lang="zh">虎刺红(4)</title>
+	</programme>
+	<channel id="江门侨乡生活">
+		<display-name lang="zh">江门侨乡生活</display-name>
+	</channel>
+	<programme channel="江门侨乡生活" start="20260727000000 +0800" stop="20260727001500 +0800">
+		<title lang="zh">精彩呈现</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727001500 +0800" stop="20260727010700 +0800">
+		<title lang="zh">野外求生3</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727010700 +0800" stop="20260727015700 +0800">
+		<title lang="zh">长江05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727015700 +0800" stop="20260727024500 +0800">
+		<title lang="zh">长江06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727024500 +0800" stop="20260727030900 +0800">
+		<title lang="zh">奇人异事第2季01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727030900 +0800" stop="20260727033300 +0800">
+		<title lang="zh">奇人异事第2季02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727033300 +0800" stop="20260727042400 +0800">
+		<title lang="zh">野外求生4</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727042400 +0800" stop="20260727051200 +0800">
+		<title lang="zh">新奇世界01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727051200 +0800" stop="20260727060000 +0800">
+		<title lang="zh">新奇世界02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727060000 +0800" stop="20260727062400 +0800">
+		<title lang="zh">奇人异事第2季03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727062400 +0800" stop="20260727064800 +0800">
+		<title lang="zh">奇人异事第2季04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727064800 +0800" stop="20260727074000 +0800">
+		<title lang="zh">野外求生3</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727074000 +0800" stop="20260727083000 +0800">
+		<title lang="zh">长江05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727083000 +0800" stop="20260727091800 +0800">
+		<title lang="zh">长江06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727091800 +0800" stop="20260727094200 +0800">
+		<title lang="zh">奇人异事第2季01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727094200 +0800" stop="20260727100600 +0800">
+		<title lang="zh">奇人异事第2季02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727100600 +0800" stop="20260727105700 +0800">
+		<title lang="zh">野外求生4</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727105700 +0800" stop="20260727114500 +0800">
+		<title lang="zh">新奇世界01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727114500 +0800" stop="20260727123300 +0800">
+		<title lang="zh">新奇世界02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727123300 +0800" stop="20260727125700 +0800">
+		<title lang="zh">奇人异事第2季03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727125700 +0800" stop="20260727132100 +0800">
+		<title lang="zh">奇人异事第2季04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727132100 +0800" stop="20260727141300 +0800">
+		<title lang="zh">野外求生3</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727141300 +0800" stop="20260727150300 +0800">
+		<title lang="zh">长江05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727150300 +0800" stop="20260727155200 +0800">
+		<title lang="zh">长江06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727155200 +0800" stop="20260727160000 +0800">
+		<title lang="zh">奇人异事第2季01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727160000 +0800" stop="20260727161500 +0800">
+		<title lang="zh">奇人异事第2季01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727161500 +0800" stop="20260727163900 +0800">
+		<title lang="zh">奇人异事第2季02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727163900 +0800" stop="20260727173000 +0800">
+		<title lang="zh">野外求生4</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727173000 +0800" stop="20260727181800 +0800">
+		<title lang="zh">新奇世界01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727181800 +0800" stop="20260727190600 +0800">
+		<title lang="zh">新奇世界02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727190600 +0800" stop="20260727193000 +0800">
+		<title lang="zh">奇人异事第2季03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727193000 +0800" stop="20260727195400 +0800">
+		<title lang="zh">奇人异事第2季04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727195400 +0800" stop="20260727204600 +0800">
+		<title lang="zh">野外求生3</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727204600 +0800" stop="20260727210000 +0800">
+		<title lang="zh">实境之旅桂林</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727210000 +0800" stop="20260727215000 +0800">
+		<title lang="zh">野外求生5</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727215000 +0800" stop="20260727223800 +0800">
+		<title lang="zh">新奇世界03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727223800 +0800" stop="20260727232600 +0800">
+		<title lang="zh">新奇世界04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727232600 +0800" stop="20260727235000 +0800">
+		<title lang="zh">奇人异事第2季05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260727235000 +0800" stop="20260727235959 +0800">
+		<title lang="zh">奇人异事第2季06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728000000 +0800" stop="20260728001400 +0800">
+		<title lang="zh">精彩呈现</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728001400 +0800" stop="20260728010500 +0800">
+		<title lang="zh">野外求生4</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728010500 +0800" stop="20260728015300 +0800">
+		<title lang="zh">新奇世界01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728015300 +0800" stop="20260728024100 +0800">
+		<title lang="zh">新奇世界02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728024100 +0800" stop="20260728030500 +0800">
+		<title lang="zh">奇人异事第2季03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728030500 +0800" stop="20260728032900 +0800">
+		<title lang="zh">奇人异事第2季04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728032900 +0800" stop="20260728041900 +0800">
+		<title lang="zh">野外求生5</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728041900 +0800" stop="20260728050700 +0800">
+		<title lang="zh">新奇世界03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728050700 +0800" stop="20260728055500 +0800">
+		<title lang="zh">新奇世界04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728055500 +0800" stop="20260728061900 +0800">
+		<title lang="zh">奇人异事第2季05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728061900 +0800" stop="20260728064300 +0800">
+		<title lang="zh">奇人异事第2季06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728064300 +0800" stop="20260728073400 +0800">
+		<title lang="zh">野外求生4</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728073400 +0800" stop="20260728082200 +0800">
+		<title lang="zh">新奇世界01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728082200 +0800" stop="20260728091000 +0800">
+		<title lang="zh">新奇世界02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728091000 +0800" stop="20260728093400 +0800">
+		<title lang="zh">奇人异事第2季03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728093400 +0800" stop="20260728095800 +0800">
+		<title lang="zh">奇人异事第2季04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728095800 +0800" stop="20260728104800 +0800">
+		<title lang="zh">野外求生5</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728104800 +0800" stop="20260728113600 +0800">
+		<title lang="zh">新奇世界03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728113600 +0800" stop="20260728122400 +0800">
+		<title lang="zh">新奇世界04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728122400 +0800" stop="20260728124800 +0800">
+		<title lang="zh">奇人异事第2季05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728124800 +0800" stop="20260728131200 +0800">
+		<title lang="zh">奇人异事第2季06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728131200 +0800" stop="20260728140400 +0800">
+		<title lang="zh">野外求生4</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728140400 +0800" stop="20260728145200 +0800">
+		<title lang="zh">新奇世界01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728145200 +0800" stop="20260728154000 +0800">
+		<title lang="zh">新奇世界02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728154000 +0800" stop="20260728160000 +0800">
+		<title lang="zh">奇人异事第2季03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728160000 +0800" stop="20260728160400 +0800">
+		<title lang="zh">奇人异事第2季03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728160400 +0800" stop="20260728162800 +0800">
+		<title lang="zh">奇人异事第2季04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728162800 +0800" stop="20260728171800 +0800">
+		<title lang="zh">野外求生5</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728171800 +0800" stop="20260728180600 +0800">
+		<title lang="zh">新奇世界03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728180600 +0800" stop="20260728185400 +0800">
+		<title lang="zh">新奇世界04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728185400 +0800" stop="20260728191800 +0800">
+		<title lang="zh">奇人异事第2季05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728191800 +0800" stop="20260728194200 +0800">
+		<title lang="zh">奇人异事第2季06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728194200 +0800" stop="20260728203300 +0800">
+		<title lang="zh">野外求生4</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728203300 +0800" stop="20260728210000 +0800">
+		<title lang="zh">实境之旅桂林</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728210000 +0800" stop="20260728215100 +0800">
+		<title lang="zh">野外求生6</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728215100 +0800" stop="20260728223900 +0800">
+		<title lang="zh">新奇世界05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728223900 +0800" stop="20260728232700 +0800">
+		<title lang="zh">新奇世界06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728232700 +0800" stop="20260728235100 +0800">
+		<title lang="zh">奇人异事第2季07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260728235100 +0800" stop="20260728235959 +0800">
+		<title lang="zh">奇人异事第2季08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729000000 +0800" stop="20260729001500 +0800">
+		<title lang="zh">精彩呈现</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729001500 +0800" stop="20260729010500 +0800">
+		<title lang="zh">野外求生5</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729010500 +0800" stop="20260729015300 +0800">
+		<title lang="zh">新奇世界03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729015300 +0800" stop="20260729024100 +0800">
+		<title lang="zh">新奇世界04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729024100 +0800" stop="20260729030500 +0800">
+		<title lang="zh">奇人异事第2季05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729030500 +0800" stop="20260729032900 +0800">
+		<title lang="zh">奇人异事第2季06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729032900 +0800" stop="20260729042100 +0800">
+		<title lang="zh">野外求生6</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729042100 +0800" stop="20260729050900 +0800">
+		<title lang="zh">新奇世界05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729050900 +0800" stop="20260729055700 +0800">
+		<title lang="zh">新奇世界06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729055700 +0800" stop="20260729062100 +0800">
+		<title lang="zh">奇人异事第2季07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729062100 +0800" stop="20260729064500 +0800">
+		<title lang="zh">奇人异事第2季08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729064500 +0800" stop="20260729073500 +0800">
+		<title lang="zh">野外求生5</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729073500 +0800" stop="20260729082300 +0800">
+		<title lang="zh">新奇世界03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729082300 +0800" stop="20260729091100 +0800">
+		<title lang="zh">新奇世界04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729091100 +0800" stop="20260729093500 +0800">
+		<title lang="zh">奇人异事第2季05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729093500 +0800" stop="20260729095900 +0800">
+		<title lang="zh">奇人异事第2季06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729095900 +0800" stop="20260729105100 +0800">
+		<title lang="zh">野外求生6</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729105100 +0800" stop="20260729113900 +0800">
+		<title lang="zh">新奇世界05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729113900 +0800" stop="20260729122700 +0800">
+		<title lang="zh">新奇世界06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729122700 +0800" stop="20260729125100 +0800">
+		<title lang="zh">奇人异事第2季07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729125100 +0800" stop="20260729131500 +0800">
+		<title lang="zh">奇人异事第2季08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729131500 +0800" stop="20260729140500 +0800">
+		<title lang="zh">野外求生5</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729140500 +0800" stop="20260729145300 +0800">
+		<title lang="zh">新奇世界03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729145300 +0800" stop="20260729154100 +0800">
+		<title lang="zh">新奇世界04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729154100 +0800" stop="20260729160000 +0800">
+		<title lang="zh">奇人异事第2季05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729160000 +0800" stop="20260729160500 +0800">
+		<title lang="zh">奇人异事第2季05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729160500 +0800" stop="20260729162900 +0800">
+		<title lang="zh">奇人异事第2季06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729162900 +0800" stop="20260729172100 +0800">
+		<title lang="zh">野外求生6</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729172100 +0800" stop="20260729180900 +0800">
+		<title lang="zh">新奇世界05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729180900 +0800" stop="20260729185700 +0800">
+		<title lang="zh">新奇世界06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729185700 +0800" stop="20260729192000 +0800">
+		<title lang="zh">奇人异事第2季07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729192000 +0800" stop="20260729194400 +0800">
+		<title lang="zh">奇人异事第2季08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729194400 +0800" stop="20260729203500 +0800">
+		<title lang="zh">野外求生5</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729203500 +0800" stop="20260729210000 +0800">
+		<title lang="zh">实境之旅桂林</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729210000 +0800" stop="20260729215100 +0800">
+		<title lang="zh">野外求生7</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729215100 +0800" stop="20260729223900 +0800">
+		<title lang="zh">新奇世界07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729223900 +0800" stop="20260729232700 +0800">
+		<title lang="zh">新奇世界08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729232700 +0800" stop="20260729235100 +0800">
+		<title lang="zh">奇人异事第2季09</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260729235100 +0800" stop="20260729235959 +0800">
+		<title lang="zh">奇人异事第2季10</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730000000 +0800" stop="20260730001500 +0800">
+		<title lang="zh">精彩呈现</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730001500 +0800" stop="20260730010700 +0800">
+		<title lang="zh">野外求生6</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730010700 +0800" stop="20260730015500 +0800">
+		<title lang="zh">新奇世界05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730015500 +0800" stop="20260730024300 +0800">
+		<title lang="zh">新奇世界06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730024300 +0800" stop="20260730030700 +0800">
+		<title lang="zh">奇人异事第2季07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730030700 +0800" stop="20260730033100 +0800">
+		<title lang="zh">奇人异事第2季08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730033100 +0800" stop="20260730042300 +0800">
+		<title lang="zh">野外求生7</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730042300 +0800" stop="20260730051100 +0800">
+		<title lang="zh">新奇世界07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730051100 +0800" stop="20260730055900 +0800">
+		<title lang="zh">新奇世界08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730055900 +0800" stop="20260730062300 +0800">
+		<title lang="zh">奇人异事第2季09</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730062300 +0800" stop="20260730064700 +0800">
+		<title lang="zh">奇人异事第2季10</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730064700 +0800" stop="20260730073800 +0800">
+		<title lang="zh">野外求生6</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730073800 +0800" stop="20260730082600 +0800">
+		<title lang="zh">新奇世界05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730082600 +0800" stop="20260730091400 +0800">
+		<title lang="zh">新奇世界06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730091400 +0800" stop="20260730093800 +0800">
+		<title lang="zh">奇人异事第2季07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730093800 +0800" stop="20260730100200 +0800">
+		<title lang="zh">奇人异事第2季08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730100200 +0800" stop="20260730105400 +0800">
+		<title lang="zh">野外求生7</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730105400 +0800" stop="20260730114200 +0800">
+		<title lang="zh">新奇世界07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730114200 +0800" stop="20260730123000 +0800">
+		<title lang="zh">新奇世界08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730123000 +0800" stop="20260730125400 +0800">
+		<title lang="zh">奇人异事第2季09</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730125400 +0800" stop="20260730131800 +0800">
+		<title lang="zh">奇人异事第2季10</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730131800 +0800" stop="20260730141000 +0800">
+		<title lang="zh">野外求生6</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730141000 +0800" stop="20260730145800 +0800">
+		<title lang="zh">新奇世界05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730145800 +0800" stop="20260730154600 +0800">
+		<title lang="zh">新奇世界06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730154600 +0800" stop="20260730160000 +0800">
+		<title lang="zh">奇人异事第2季07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730160000 +0800" stop="20260730161000 +0800">
+		<title lang="zh">奇人异事第2季07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730161000 +0800" stop="20260730163400 +0800">
+		<title lang="zh">奇人异事第2季08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730163400 +0800" stop="20260730172500 +0800">
+		<title lang="zh">野外求生7</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730172500 +0800" stop="20260730181300 +0800">
+		<title lang="zh">新奇世界07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730181300 +0800" stop="20260730190100 +0800">
+		<title lang="zh">新奇世界08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730190100 +0800" stop="20260730192500 +0800">
+		<title lang="zh">奇人异事第2季09</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730192500 +0800" stop="20260730194900 +0800">
+		<title lang="zh">奇人异事第2季10</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730194900 +0800" stop="20260730204100 +0800">
+		<title lang="zh">野外求生6</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730204100 +0800" stop="20260730210000 +0800">
+		<title lang="zh">实境之旅桂林</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730210000 +0800" stop="20260730215100 +0800">
+		<title lang="zh">野外求生8</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730215100 +0800" stop="20260730223600 +0800">
+		<title lang="zh">交通中国01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730223600 +0800" stop="20260730232100 +0800">
+		<title lang="zh">交通中国02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730232100 +0800" stop="20260730234600 +0800">
+		<title lang="zh">巴渝民居01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260730234600 +0800" stop="20260730235959 +0800">
+		<title lang="zh">巴渝民居02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731000000 +0800" stop="20260731001200 +0800">
+		<title lang="zh">精彩呈现</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731001200 +0800" stop="20260731010400 +0800">
+		<title lang="zh">野外求生7</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731010400 +0800" stop="20260731015200 +0800">
+		<title lang="zh">新奇世界07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731015200 +0800" stop="20260731024000 +0800">
+		<title lang="zh">新奇世界08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731024000 +0800" stop="20260731030400 +0800">
+		<title lang="zh">奇人异事第2季09</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731030400 +0800" stop="20260731032800 +0800">
+		<title lang="zh">奇人异事第2季10</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731032800 +0800" stop="20260731042000 +0800">
+		<title lang="zh">野外求生8</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731042000 +0800" stop="20260731050500 +0800">
+		<title lang="zh">交通中国01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731050500 +0800" stop="20260731055000 +0800">
+		<title lang="zh">交通中国02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731055000 +0800" stop="20260731061400 +0800">
+		<title lang="zh">巴渝民居01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731061400 +0800" stop="20260731064100 +0800">
+		<title lang="zh">巴渝民居02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731064100 +0800" stop="20260731073300 +0800">
+		<title lang="zh">野外求生7</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731073300 +0800" stop="20260731082100 +0800">
+		<title lang="zh">新奇世界07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731082100 +0800" stop="20260731090900 +0800">
+		<title lang="zh">新奇世界08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731090900 +0800" stop="20260731093300 +0800">
+		<title lang="zh">奇人异事第2季09</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731093300 +0800" stop="20260731095700 +0800">
+		<title lang="zh">奇人异事第2季10</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731095700 +0800" stop="20260731104800 +0800">
+		<title lang="zh">野外求生8</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731104800 +0800" stop="20260731113300 +0800">
+		<title lang="zh">交通中国01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731113300 +0800" stop="20260731121800 +0800">
+		<title lang="zh">交通中国02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731121800 +0800" stop="20260731124300 +0800">
+		<title lang="zh">巴渝民居01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731124300 +0800" stop="20260731130900 +0800">
+		<title lang="zh">巴渝民居02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731130900 +0800" stop="20260731140100 +0800">
+		<title lang="zh">野外求生7</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731140100 +0800" stop="20260731144900 +0800">
+		<title lang="zh">新奇世界07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731144900 +0800" stop="20260731153700 +0800">
+		<title lang="zh">新奇世界08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731153700 +0800" stop="20260731160000 +0800">
+		<title lang="zh">奇人异事第2季09</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731160000 +0800" stop="20260731160100 +0800">
+		<title lang="zh">奇人异事第2季09</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731160100 +0800" stop="20260731162500 +0800">
+		<title lang="zh">奇人异事第2季10</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731162500 +0800" stop="20260731171700 +0800">
+		<title lang="zh">野外求生8</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731171700 +0800" stop="20260731180200 +0800">
+		<title lang="zh">交通中国01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731180200 +0800" stop="20260731184700 +0800">
+		<title lang="zh">交通中国02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731184700 +0800" stop="20260731191100 +0800">
+		<title lang="zh">巴渝民居01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731191100 +0800" stop="20260731193800 +0800">
+		<title lang="zh">巴渝民居02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731193800 +0800" stop="20260731203000 +0800">
+		<title lang="zh">野外求生7</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731203000 +0800" stop="20260731210000 +0800">
+		<title lang="zh">实境之旅桂林</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731210000 +0800" stop="20260731215100 +0800">
+		<title lang="zh">野外求生9</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731215100 +0800" stop="20260731223600 +0800">
+		<title lang="zh">交通中国03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731223600 +0800" stop="20260731232100 +0800">
+		<title lang="zh">交通中国04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731232100 +0800" stop="20260731234700 +0800">
+		<title lang="zh">巴渝民居03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260731234700 +0800" stop="20260731235959 +0800">
+		<title lang="zh">巴渝民居04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801000000 +0800" stop="20260801001400 +0800">
+		<title lang="zh">精彩呈现</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801001400 +0800" stop="20260801010500 +0800">
+		<title lang="zh">野外求生8</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801010500 +0800" stop="20260801015000 +0800">
+		<title lang="zh">交通中国01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801015000 +0800" stop="20260801023500 +0800">
+		<title lang="zh">交通中国02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801023500 +0800" stop="20260801030000 +0800">
+		<title lang="zh">巴渝民居01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801030000 +0800" stop="20260801032600 +0800">
+		<title lang="zh">巴渝民居02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801032600 +0800" stop="20260801041700 +0800">
+		<title lang="zh">野外求生9</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801041700 +0800" stop="20260801050200 +0800">
+		<title lang="zh">交通中国03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801050200 +0800" stop="20260801054700 +0800">
+		<title lang="zh">交通中国04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801054700 +0800" stop="20260801061400 +0800">
+		<title lang="zh">巴渝民居03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801061400 +0800" stop="20260801064000 +0800">
+		<title lang="zh">巴渝民居04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801064000 +0800" stop="20260801073200 +0800">
+		<title lang="zh">野外求生8</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801073200 +0800" stop="20260801081700 +0800">
+		<title lang="zh">交通中国01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801081700 +0800" stop="20260801090200 +0800">
+		<title lang="zh">交通中国02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801090200 +0800" stop="20260801092700 +0800">
+		<title lang="zh">巴渝民居01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801092700 +0800" stop="20260801095300 +0800">
+		<title lang="zh">巴渝民居02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801095300 +0800" stop="20260801104400 +0800">
+		<title lang="zh">野外求生9</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801104400 +0800" stop="20260801112900 +0800">
+		<title lang="zh">交通中国03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801112900 +0800" stop="20260801121400 +0800">
+		<title lang="zh">交通中国04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801121400 +0800" stop="20260801124100 +0800">
+		<title lang="zh">巴渝民居03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801124100 +0800" stop="20260801130700 +0800">
+		<title lang="zh">巴渝民居04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801130700 +0800" stop="20260801135900 +0800">
+		<title lang="zh">野外求生8</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801135900 +0800" stop="20260801144400 +0800">
+		<title lang="zh">交通中国01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801144400 +0800" stop="20260801152900 +0800">
+		<title lang="zh">交通中国02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801152900 +0800" stop="20260801155400 +0800">
+		<title lang="zh">巴渝民居01</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801155400 +0800" stop="20260801160000 +0800">
+		<title lang="zh">巴渝民居02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801160000 +0800" stop="20260801162000 +0800">
+		<title lang="zh">巴渝民居02</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801162000 +0800" stop="20260801171100 +0800">
+		<title lang="zh">野外求生9</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801171100 +0800" stop="20260801175600 +0800">
+		<title lang="zh">交通中国03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801175600 +0800" stop="20260801184100 +0800">
+		<title lang="zh">交通中国04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801184100 +0800" stop="20260801190800 +0800">
+		<title lang="zh">巴渝民居03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801190800 +0800" stop="20260801193400 +0800">
+		<title lang="zh">巴渝民居04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801193400 +0800" stop="20260801202600 +0800">
+		<title lang="zh">野外求生8</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801202600 +0800" stop="20260801210000 +0800">
+		<title lang="zh">实境之旅桂林</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801210000 +0800" stop="20260801215100 +0800">
+		<title lang="zh">野外求生10</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801215100 +0800" stop="20260801223600 +0800">
+		<title lang="zh">交通中国05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801223600 +0800" stop="20260801232100 +0800">
+		<title lang="zh">交通中国06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801232100 +0800" stop="20260801234700 +0800">
+		<title lang="zh">巴渝民居05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260801234700 +0800" stop="20260801235959 +0800">
+		<title lang="zh">巴渝民居06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802000000 +0800" stop="20260802001200 +0800">
+		<title lang="zh">精彩呈现</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802001200 +0800" stop="20260802010300 +0800">
+		<title lang="zh">野外求生9</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802010300 +0800" stop="20260802014800 +0800">
+		<title lang="zh">交通中国03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802014800 +0800" stop="20260802023300 +0800">
+		<title lang="zh">交通中国04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802023300 +0800" stop="20260802030000 +0800">
+		<title lang="zh">巴渝民居03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802030000 +0800" stop="20260802032600 +0800">
+		<title lang="zh">巴渝民居04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802032600 +0800" stop="20260802041800 +0800">
+		<title lang="zh">野外求生10</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802041800 +0800" stop="20260802050200 +0800">
+		<title lang="zh">交通中国05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802050200 +0800" stop="20260802054700 +0800">
+		<title lang="zh">交通中国06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802054700 +0800" stop="20260802061300 +0800">
+		<title lang="zh">巴渝民居05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802061300 +0800" stop="20260802063900 +0800">
+		<title lang="zh">巴渝民居06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802063900 +0800" stop="20260802073000 +0800">
+		<title lang="zh">野外求生9</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802073000 +0800" stop="20260802081500 +0800">
+		<title lang="zh">交通中国03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802081500 +0800" stop="20260802090000 +0800">
+		<title lang="zh">交通中国04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802090000 +0800" stop="20260802092700 +0800">
+		<title lang="zh">巴渝民居03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802092700 +0800" stop="20260802095300 +0800">
+		<title lang="zh">巴渝民居04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802095300 +0800" stop="20260802104400 +0800">
+		<title lang="zh">野外求生10</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802104400 +0800" stop="20260802112900 +0800">
+		<title lang="zh">交通中国05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802112900 +0800" stop="20260802121400 +0800">
+		<title lang="zh">交通中国06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802121400 +0800" stop="20260802124000 +0800">
+		<title lang="zh">巴渝民居05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802124000 +0800" stop="20260802130500 +0800">
+		<title lang="zh">巴渝民居06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802130500 +0800" stop="20260802135700 +0800">
+		<title lang="zh">野外求生9</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802135700 +0800" stop="20260802144200 +0800">
+		<title lang="zh">交通中国03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802144200 +0800" stop="20260802152700 +0800">
+		<title lang="zh">交通中国04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802152700 +0800" stop="20260802155300 +0800">
+		<title lang="zh">巴渝民居03</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802155300 +0800" stop="20260802160000 +0800">
+		<title lang="zh">巴渝民居04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802160000 +0800" stop="20260802161900 +0800">
+		<title lang="zh">巴渝民居04</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802161900 +0800" stop="20260802171100 +0800">
+		<title lang="zh">野外求生10</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802171100 +0800" stop="20260802175600 +0800">
+		<title lang="zh">交通中国05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802175600 +0800" stop="20260802184100 +0800">
+		<title lang="zh">交通中国06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802184100 +0800" stop="20260802190700 +0800">
+		<title lang="zh">巴渝民居05</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802190700 +0800" stop="20260802193200 +0800">
+		<title lang="zh">巴渝民居06</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802193200 +0800" stop="20260802202300 +0800">
+		<title lang="zh">野外求生9</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802202300 +0800" stop="20260802210000 +0800">
+		<title lang="zh">实境之旅桂林</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802210000 +0800" stop="20260802215100 +0800">
+		<title lang="zh">野外求生11</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802215100 +0800" stop="20260802223600 +0800">
+		<title lang="zh">交通中国07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802223600 +0800" stop="20260802232100 +0800">
+		<title lang="zh">交通中国08</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802232100 +0800" stop="20260802234800 +0800">
+		<title lang="zh">巴渝民居07</title>
+	</programme>
+	<programme channel="江门侨乡生活" start="20260802234800 +0800" stop="20260802235959 +0800">
+		<title lang="zh">巴渝民居08</title>
 	</programme>
 </tv>
