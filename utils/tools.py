@@ -877,6 +877,8 @@ def get_name_urls_from_file(path: str | list, format_name_flag: bool = False) ->
     """
     paths = path if isinstance(path, (list, tuple)) else [path]
     name_urls = defaultdict(list)
+    # 用 set 做 O(1) 去重，避免 list 成员检查退化为 O(n²)
+    seen = defaultdict(set)
 
     for p in paths:
         real_path = resource_path(p)
@@ -900,7 +902,8 @@ def get_name_urls_from_file(path: str | list, format_name_flag: bool = False) ->
             for item in data:
                 name = format_name(item["name"]) if format_name_flag else item["name"]
                 url = item["value"]
-                if url and url not in name_urls[name]:
+                if url and url not in seen[name]:
+                    seen[name].add(url)
                     name_urls[name].append(url)
         else:
             for line in content.splitlines():
@@ -911,7 +914,8 @@ def get_name_urls_from_file(path: str | list, format_name_flag: bool = False) ->
                 if name_value and name_value[0]:
                     name = format_name(name_value[0]["name"]) if format_name_flag else name_value[0]["name"]
                     url = name_value[0]["value"]
-                    if url and url not in name_urls[name]:
+                    if url and url not in seen[name]:
+                        seen[name].add(url)
                         name_urls[name].append(url)
 
     return name_urls
