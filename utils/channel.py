@@ -76,8 +76,13 @@ class _LimitedLogger:
         self.limit = limit
         self.count = 0
 
+    @property
+    def full(self):
+        """Whether the log limit has been reached (avoid building expensive messages)."""
+        return self.count >= self.limit
+
     def info(self, *args, **kwargs):
-        if self.count >= self.limit:
+        if self.full:
             return
         self.count += 1
         self.logger.info(*args, **kwargs)
@@ -188,12 +193,22 @@ def get_channel_data_from_file(channels, file, whitelist_maps, blacklist,
     matched_local_names = set()
     matched_hls_names = set()
     unmatch_category = t("content.unmatch_channel")
+    # 每个 (category, name) 维护一个持久 URL set，避免在循环内反复重建 O(n²)
+    existing_urls_by_key: dict = {}
+
+    def get_existing_urls(category_name: str, channel_name: str, category_dict):
+        key = (category_name, channel_name)
+        existing = existing_urls_by_key.get(key)
+        if existing is None:
+            existing = {d.get("url") for d in category_dict.get(channel_name, []) if d.get("url")}
+            existing_urls_by_key[key] = existing
+        return existing
 
     def append_unmatch_data(name: str, info_list: list):
         category_dict = channels[unmatch_category]
         if name not in category_dict:
             category_dict[name] = []
-        existing_urls = {d.get("url") for d in category_dict.get(name, []) if d.get("url")}
+        existing_urls = get_existing_urls(unmatch_category, name, category_dict)
         for item in info_list:
             if not item:
                 continue
@@ -218,7 +233,7 @@ def get_channel_data_from_file(channels, file, whitelist_maps, blacklist,
                 first_time = name not in category_dict
                 if first_time:
                     category_dict[name] = []
-                existing_urls = {d.get("url") for d in category_dict.get(name, []) if d.get("url")}
+                existing_urls = get_existing_urls(current_category, name, category_dict)
 
                 if first_time:
                     for whitelist_url in get_whitelist_url(whitelist_maps, name):
@@ -772,7 +787,6 @@ async def test_speed(data, ipv6=False, callback=None, on_task_complete=None):
         for name, info_list in channel_obj.items():
             total_tasks_by_channel[(cate, name)] += len(info_list)
     completed = 0
-    grouped_results = {}
     completed_by_channel = defaultdict(int)
     urls_limit = config.urls_limit
     valid_count_by_channel = defaultdict(int)
@@ -780,12 +794,8 @@ async def test_speed(data, ipv6=False, callback=None, on_task_complete=None):
 
     def handle_result(cate, name, info, result):
         nonlocal completed
-        if cate not in grouped_results:
-            grouped_results[cate] = {}
-        if name not in grouped_results[cate]:
-            grouped_results[cate][name] = []
+        # 结果只交给 aggregator（on_task_complete 回调）保存，避免维护第二份完整副本
         merged = {**info, **result}
-        grouped_results[cate][name].append(merged)
 
         if check_channel_need_frozen(merged):
             mark_url_bad(merged.get("url"))
@@ -800,21 +810,22 @@ async def test_speed(data, ipv6=False, callback=None, on_task_complete=None):
                 stopped_channels.add((cate, name))
                 reached_limit = valid_count_by_channel[(cate, name)] == urls_limit
 
-            try:
-                origin = merged.get('origin')
-                origin_name = t(f"name.{origin}") if origin else origin
-                result_logger.info(
-                    f"ID: {merged.get('id')}, {t('name.name')}: {name}, "
-                    f"{t('pbar.url')}: {merged.get('url')}, {t('name.from')}: {origin_name}, "
-                    f"{t('name.ipv_type')}: {merged.get('ipv_type')}, {t('name.location')}: {merged.get('location')}, "
-                    f"{t('name.isp')}: {merged.get('isp')}, "
-                    f"{t('name.delay')}: {merged.get('delay') or -1} ms, {t('name.speed')}: {(merged.get('speed') or 0):.2f} M/s, "
-                    f"{t('name.resolution')}: {merged.get('resolution')}, {t('name.fps')}: {merged.get('fps') or t('name.unknown')}, "
-                    f"{t('name.video_codec')}: {merged.get('video_codec') or t('name.unknown')}, "
-                    f"{t('name.audio_codec')}: {merged.get('audio_codec') or t('name.unknown')}"
-                )
-            except Exception:
-                pass
+            if not result_logger.full:
+                try:
+                    origin = merged.get('origin')
+                    origin_name = t(f"name.{origin}") if origin else origin
+                    result_logger.info(
+                        f"ID: {merged.get('id')}, {t('name.name')}: {name}, "
+                        f"{t('pbar.url')}: {merged.get('url')}, {t('name.from')}: {origin_name}, "
+                        f"{t('name.ipv_type')}: {merged.get('ipv_type')}, {t('name.location')}: {merged.get('location')}, "
+                        f"{t('name.isp')}: {merged.get('isp')}, "
+                        f"{t('name.delay')}: {merged.get('delay') or -1} ms, {t('name.speed')}: {(merged.get('speed') or 0):.2f} M/s, "
+                        f"{t('name.resolution')}: {merged.get('resolution')}, {t('name.fps')}: {merged.get('fps') or t('name.unknown')}, "
+                        f"{t('name.video_codec')}: {merged.get('video_codec') or t('name.unknown')}, "
+                        f"{t('name.audio_codec')}: {merged.get('audio_codec') or t('name.unknown')}"
+                    )
+                except Exception:
+                    pass
 
         completed += 1
         completed_by_channel[(cate, name)] += 1
@@ -888,7 +899,8 @@ async def test_speed(data, ipv6=False, callback=None, on_task_complete=None):
 
     close_logger_handlers(speed_log_handler)
     close_logger_handlers(result_log_handler)
-    return grouped_results
+    # 结果已通过 on_task_complete 回调交给 aggregator，无需再返回完整副本
+    return {}
 
 
 def sort_channel_result(channel_data, result=None, filter_host=False, ipv6_support=True, cate=None, name=None):
