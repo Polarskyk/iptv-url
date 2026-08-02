@@ -369,6 +369,9 @@ def get_channel_items(whitelist_maps, blacklist) -> CategoryChannelData:
                 try:
                     if info.get("origin") in retain_origin or check_url_by_keywords(info_url, blacklist):
                         continue
+
+                    if is_url_frozen(info_url):
+                        continue
                     if check_channel_need_frozen(info):
                         mark_url_bad(info_url, initial=True)
                         continue
@@ -796,6 +799,9 @@ async def test_speed(data, ipv6=False, callback=None, on_task_complete=None):
     urls_limit = config.urls_limit
     valid_count_by_channel = defaultdict(int)
     stopped_channels = set()
+    HOST_FAIL_LIMIT = 3
+    failed_host_counts = {}
+    blacklisted_hosts = set()
 
     def handle_result(cate, name, info, result):
         nonlocal completed
@@ -808,6 +814,19 @@ async def test_speed(data, ipv6=False, callback=None, on_task_complete=None):
             mark_url_good(merged.get("url"))
 
         is_valid = is_valid_speed_result(merged)
+
+        host = merged.get("host")
+        if host:
+            
+            is_ipv6_default = bool(ipv6_proxy_url) and merged.get("ipv_type") == "ipv6"
+            if is_valid or is_ipv6_default:
+                failed_host_counts.pop(host, None)
+                blacklisted_hosts.discard(host)
+            else:
+                failed_host_counts[host] = failed_host_counts.get(host, 0) + 1
+                if failed_host_counts[host] >= HOST_FAIL_LIMIT:
+                    blacklisted_hosts.add(host)
+
         reached_limit = False
         if is_valid:
             valid_count_by_channel[(cate, name)] += 1
@@ -872,9 +891,16 @@ async def test_speed(data, ipv6=False, callback=None, on_task_complete=None):
                 if (cate, name) in stopped_channels:
                     skipped += 1
                     continue
+                if info.get("host") in blacklisted_hosts:
+                    skipped += 1
+                    continue
                 result = {}
+               
+                task_timeout = config.speed_test_timeout
+                if (info.get("delay") or 0) > 5000:
+                    task_timeout = max(4.0, config.speed_test_timeout * 0.6)
                 try:
-                    async with asyncio.timeout(config.speed_test_timeout):
+                    async with asyncio.timeout(task_timeout):
                         result = await get_speed(
                             info,
                             headers=info.get("headers") or None,
