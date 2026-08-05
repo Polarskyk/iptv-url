@@ -1,0 +1,32 @@
+#EXTM3U x-tvg-url="https://epg.catvod.com/epg.xml"
+
+
+#EXTINF:-1 tvg-name="此版本到期" tvg-logo="https://logo.catvod.com/维护不易.png" group-title="♨️♨️获取新版",此版本到期
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+#EXTINF:-1 tvg-name="公众号" tvg-logo="https://logo.catvod.com/感谢支持.png" group-title="♨️♨️获取新版",公众号【宝盒资源】
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+#EXTINF:-1 tvg-name="觉得不错" tvg-logo="https://logo.catvod.com/觉得不错.png" group-title="♨️♨️获取新版",回复【BH】
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+#EXTINF:-1 tvg-name="可以打赏" tvg-logo="https://logo.catvod.com/可以打赏.png" group-title="♨️♨️获取新版",获取新版
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+
+
+#EXTINF:-1 tvg-name="此版本到期" tvg-logo="https://logo.catvod.com/维护不易.png" group-title="♨️♨️获取新版",此版本到期
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+#EXTINF:-1 tvg-name="公众号" tvg-logo="https://logo.catvod.com/感谢支持.png" group-title="♨️♨️获取新版",公众号【宝盒资源】
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+#EXTINF:-1 tvg-name="觉得不错" tvg-logo="https://logo.catvod.com/觉得不错.png" group-title="♨️♨️获取新版",回复【BH】
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+#EXTINF:-1 tvg-name="可以打赏" tvg-logo="https://logo.catvod.com/可以打赏.png" group-title="♨️♨️获取新版",获取新版
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+
+
+
+#EXTINF:-1 tvg-name="维护不易" tvg-logo="https://logo.catvod.com/维护不易.png" group-title="♨️♨️赞赏支持",维护不易
+https://gitee.com/guot55/ygbh888/raw/master/bh.mp4
+#EXTINF:-1 tvg-name="感谢支持" tvg-logo="https://logo.catvod.com/感谢支持.png" group-title="♨️♨️赞赏支持",感谢支持
+https://gitee.com/guot55/ygbh888/raw/master/bh.mp4
+#EXTINF:-1 tvg-name="觉得不错" tvg-logo="https://logo.catvod.com/觉得不错.png" group-title="♨️♨️赞赏支持",觉得不错
+https://gitee.com/guot55/ygbh888/raw/master/bh.mp4
+#EXTINF:-1 tvg-name="可以打赏" tvg-logo="https://logo.catvod.com/可以打赏.png" group-title="♨️♨️赞赏支持",可以打赏
+https://gitee.com/guot55/ygbh888/raw/master/bh.mp4
