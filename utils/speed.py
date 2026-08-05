@@ -22,6 +22,7 @@ http.cookies._is_legal_key = lambda _: True
 cache: TestResultCacheData = {}
 # ffprobe 结果按 host 缓存：同一 host 的多个 URL 只需探测一次（分辨率/编解码器通常一致）
 probe_cache: dict = {}
+_cache_avg_results: dict[str, tuple[int, dict]] = {}
 _CACHE_MAX_TOTAL_KEYS = 8192
 speed_test_timeout = config.speed_test_timeout
 speed_test_filter_host = config.speed_test_filter_host
@@ -545,17 +546,45 @@ def sample_segment_urls(segment_urls: list, limit: int) -> list:
 
 
 def get_avg_result(result) -> TestResult:
-    delays = [item.get('delay') for item in result if isinstance(item.get('delay'), (int, float)) and item['delay'] >= 0]
-    resolutions = [item.get('resolution') for item in result if item.get('resolution')]
-    best = max(result, key=lambda item: item.get('speed') or 0)
+    if not result:
+        return {'speed': 0, 'delay': -1, 'resolution': None}
+
+    total_speed = 0.0
+    total_delay = 0.0
+    delay_count = 0
+    best = None
+    best_speed = -1.0
+    best_resolution = None
+    best_resolution_value = -1
+
+    for item in result:
+        speed = item.get('speed') or 0
+        total_speed += speed
+        if speed > best_speed:
+            best_speed = speed
+            best = item
+
+        delay = item.get('delay')
+        if isinstance(delay, (int, float)) and delay >= 0:
+            total_delay += delay
+            delay_count += 1
+
+        resolution = item.get('resolution')
+        if resolution:
+            resolution_value = get_resolution_value(resolution)
+            if resolution_value > best_resolution_value:
+                best_resolution_value = resolution_value
+                best_resolution = resolution
+
     averaged = {
-        'speed': sum(item.get('speed') or 0 for item in result) / len(result),
-        'delay': int(sum(delays) / len(delays)) if delays else -1,
-        'resolution': max(resolutions, key=get_resolution_value) if resolutions else None,
+        'speed': total_speed / len(result),
+        'delay': int(total_delay / delay_count) if delay_count else -1,
+        'resolution': best_resolution,
     }
-    for key in ('fps', 'video_codec', 'audio_codec'):
-        if best.get(key) is not None:
-            averaged[key] = best[key]
+    if best:
+        for key in ('fps', 'video_codec', 'audio_codec'):
+            if best.get(key) is not None:
+                averaged[key] = best[key]
     return averaged
 
 
@@ -564,7 +593,14 @@ def get_speed_result(key: str) -> TestResult:
     Get the speed result of the url
     """
     if key in cache:
-        return get_avg_result(cache[key])
+        items = cache[key]
+        cached_avg = _cache_avg_results.get(key)
+        if cached_avg and cached_avg[0] == len(items):
+            return cached_avg[1]
+
+        averaged = get_avg_result(items)
+        _cache_avg_results[key] = (len(items), averaged)
+        return averaged
     else:
         return {'speed': 0, 'delay': -1, 'resolution': None}
 
@@ -690,15 +726,19 @@ def _cache_add_result(cache_key: str, result: dict) -> None:
 
             for key in list(cache)[: len(cache) // 2]:
                 cache.pop(key, None)
+                _cache_avg_results.pop(key, None)
         cache[cache_key] = [result]
+        _cache_avg_results.pop(cache_key, None)
         return
     items.append(result)
+    _cache_avg_results.pop(cache_key, None)
 
 
 def clear_cache():
     """
     Clear the speed test cache
     """
-    global cache, probe_cache
+    global cache, probe_cache, _cache_avg_results
     cache = {}
     probe_cache = {}
+    _cache_avg_results = {}

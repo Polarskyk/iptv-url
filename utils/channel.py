@@ -1069,7 +1069,7 @@ def process_write_content(
     :param enable_log: enable log
     :param is_last: is last write
     """
-    content = ""
+    content_lines = []
     no_result_name = []
     first_cate = True
     result_data = defaultdict(list)
@@ -1078,7 +1078,9 @@ def process_write_content(
     open_url_info = config.open_url_info
     unmatch_category = t("content.unmatch_channel")
     for cate, channel_obj in data.items():
-        content += f"{'\n\n' if not first_cate else ''}{cate},#genre#"
+        if not first_cate:
+            content_lines.append("")
+        content_lines.append(f"{cate},#genre#")
         first_cate = False
         channel_obj_keys = channel_obj.keys()
         for i, name in enumerate(channel_obj_keys):
@@ -1101,14 +1103,16 @@ def process_write_content(
                 if open_url_info and extra_info:
                     item_url = add_url_info(item_url, extra_info)
                 total_item_url = f"{hls_url}/{item['id']}.m3u8" if hls_url else item_url
-                content += f"\n{name},{total_item_url}"
+                content_lines.append(f"{name},{total_item_url}")
     if open_empty_category and no_result_name and is_last:
         custom_print(f"\n{t("msg.no_result_channel")}")
-        content += f"\n\n{t("content.no_result_channel")},#genre#"
+        content_lines.append("")
+        content_lines.append(f"{t("content.no_result_channel")},#genre#")
         for i, name in enumerate(no_result_name):
             end_char = ", " if i < len(no_result_name) - 1 else ""
             custom_print(name, end=end_char)
-            content += f"\n{name},url"
+            content_lines.append(f"{name},url")
+    content = "\n".join(content_lines)
     render_hasher = hashlib.sha256(content.encode("utf-8"))
     render_hasher.update(
         repr((
@@ -1149,10 +1153,11 @@ def process_write_content(
         if open_url_info and update_time_extra_info:
             update_time_item_url = add_url_info(update_time_item_url, update_time_extra_info)
         value = f"{hls_url}/{update_time_item["id"]}.m3u8" if hls_url else update_time_item_url
+        update_time_block = [f"{update_title},#genre#", f"{now},{value}"]
         if config.update_time_position == "top":
-            content = f"{update_title},#genre#\n{now},{value}\n\n{content}"
+            content = "\n".join(update_time_block + ["", content])
         else:
-            content += f"\n\n{update_title},#genre#\n{now},{value}"
+            content = "\n".join([content, ""] + update_time_block)
     try:
         target_dir = os.path.dirname(path) or "."
         os.makedirs(target_dir, exist_ok=True)
